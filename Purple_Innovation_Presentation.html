@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Innovation Industry Analysis | Strategic Assessment 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+/* Enhanced CSS Variables with Extended Color Palette */
+:root {
+--purple-primary: #6610f2;
+--purple-dark: #4c1c91;
+--purple-light: #e7e3fc;
+--purple-gradient: linear-gradient(135deg, #6610f2 0%, #9d4edd 50%, #c77dff 100%);
+--purple-gradient-dark: linear-gradient(135deg, #2a0845 0%, #6441A5 100%);
+--purple-gradient-soft: linear-gradient(135deg, #e7e3fc 0%, #f3e8ff 100%);
+--teal: #14b8a6;
+--teal-light: #ccfbf1;
+--blue: #3b82f6;
+--blue-light: #dbeafe;
+--indigo: #6366f1;
+--indigo-light: #e0e7ff;
+--pink: #ec4899;
+--pink-light: #fce7f3;
+--amber: #f59e0b;
+--amber-light: #fef3c7;
+--emerald: #10b981;
+--emerald-light: #d1fae5;
+--rose: #f43f5e;
+--rose-light: #ffe4e6;
+--cyan: #06b6d4;
+--cyan-light: #cffafe;
+--success: #10b981;
+--success-light: #d1fae5;
+--warning: #f59e0b;
+--warning-light: #fef3c7;
+--danger: #ef4444;
+--danger-light: #fee2e2;
+--text-primary: #1e293b;
+--text-secondary: #475569;
+--text-muted: #64748b;
+--bg-base: #f8fafc;
+--bg-elevated: #ffffff;
+--bg-surface: #f1f5f9;
+--shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+--shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+--shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+--shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+--shadow-glow: 0 0 40px rgba(102, 16, 242, 0.2);
+--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+--transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+min-height: 100vh;
+overflow: hidden; /* Prevent scrollbars for auto-scaling */
+color: var(--text-primary);
+}
+/* Navigation */
+.nav-container {
+position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+background: rgba(255, 255, 255, 0.85);
+backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+box-shadow: var(--shadow-md);
+padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center;
+border-bottom: 1px solid rgba(255,255,255,0.3);
+height: 68px;
+}
+.nav-container::after {
+content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--purple-gradient);
+}
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo {
+width: 44px; height: 44px; background: var(--purple-gradient); border-radius: 12px;
+display: flex; align-items: center; justify-content: center; color: white; font-weight: 800;
+font-size: 1.4rem; box-shadow: 0 4px 15px rgba(102, 16, 242, 0.4); animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+0%, 100% { box-shadow: 0 4px 15px rgba(102, 16, 242, 0.3); }
+50% { box-shadow: 0 4px 25px rgba(102, 16, 242, 0.6); }
+}
+.nav-title { font-weight: 800; background: var(--purple-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.2rem; letter-spacing: -0.5px;}
+.nav-controls { display: flex; align-items: center; gap: 1rem; }
+.nav-btn {
+background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.05); padding: 0.6rem 1.2rem;
+border-radius: 10px; cursor: pointer; font-weight: 600; color: var(--text-secondary);
+transition: var(--transition); display: flex; align-items: center; gap: 0.5rem;
+}
+.nav-btn:hover { background: var(--purple-light); color: var(--purple-primary); border-color: var(--purple-primary); transform: translateY(-2px); box-shadow: var(--shadow-sm);}
+.slide-counter { font-weight: 800; background: var(--purple-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; min-width: 90px; text-align: center; font-size: 1.1rem; }
+/* Export Controls */
+.export-controls { display: flex; gap: 0.5rem; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid var(--bg-surface); }
+.export-btn {
+background: var(--purple-gradient); border: none; padding: 0.6rem 1rem; border-radius: 10px;
+cursor: pointer; font-weight: 600; color: white; transition: var(--transition);
+display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; box-shadow: 0 2px 8px rgba(102, 16, 242, 0.3);
+}
+.export-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(102, 16, 242, 0.5); }
+.export-btn.pdf { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3); }
+.export-btn.pptx { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3); }
+/* Progress Bar */
+.progress-container { position: fixed; top: 68px; left: 0; right: 0; height: 4px; background: rgba(0,0,0,0.05); z-index: 999; }
+.progress-bar { height: 100%; background: var(--purple-gradient); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0 3px 3px 0; box-shadow: 0 0 10px rgba(102, 16, 242, 0.5); }
+
+/* Presentation Area & Scaling Wrapper */
+.presentation-area {
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.slides-wrapper {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    transform-origin: top center;
+    /* Transform scale is applied via JS */
+}
+
+/* Slide Container - NEW 1366x768 DIMENSIONS */
+.slide {
+    width: 1366px; 
+    height: 768px; 
+    background: var(--bg-base); border-radius: 24px;
+    box-shadow: var(--shadow-xl), var(--shadow-glow); overflow: hidden; position: absolute;
+    top: 0; left: 0;
+    display: none; animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.slide.active { display: block; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(40px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Slide Headers */
+.slide-header { background: var(--purple-gradient); padding: 2.5rem 4rem; position: relative; overflow: hidden; }
+.slide-header::before { content: ''; position: absolute; top: -50%; right: -10%; width: 450px; height: 450px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; animation: float 6s ease-in-out infinite; }
+.slide-header::after { content: ''; position: absolute; bottom: -30%; left: 10%; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; animation: float 8s ease-in-out infinite reverse; }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
+.slide-header h2 { color: white; font-size: 2.8rem; font-weight: 800; position: relative; z-index: 1; text-shadow: 0 2px 10px rgba(0,0,0,0.2); letter-spacing: -0.5px;}
+.slide-header .subtitle { color: rgba(255,255,255,0.9); font-size: 1.3rem; margin-top: 0.5rem; position: relative; z-index: 1; font-weight: 500;}
+
+/* Slide Content - Removed fixed height to allow natural measurement for dynamic scaling */
+.slide-content { padding: 3rem 4rem; display: flex; flex-direction: column; }
+
+/* Title Slide */
+.title-slide { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; background: var(--purple-gradient-dark); position: relative; overflow: hidden; }
+.title-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: patternMove 20s linear infinite; }
+@keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
+.title-slide h1 { font-size: 5.5rem; color: white; font-weight: 900; margin-bottom: 1rem; position: relative; z-index: 1; text-shadow: 0 4px 30px rgba(0,0,0,0.5); animation: titleFadeIn 1s ease-out; letter-spacing: -1px;}
+@keyframes titleFadeIn { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+.title-slide h2 { font-size: 2.4rem; color: rgba(255,255,255,0.95); font-weight: 500; margin-bottom: 1rem; position: relative; z-index: 1; animation: titleFadeIn 1s ease-out 0.2s both; }
+.title-slide p { color: rgba(255,255,255,0.85); font-size: 1.4rem; position: relative; z-index: 1; animation: titleFadeIn 1s ease-out 0.4s both; }
+.title-slide .date-badge { margin-top: 3rem; background: rgba(255,255,255,0.15); padding: 1rem 2.5rem; border-radius: 50px; color: white; font-weight: 600; font-size: 1.2rem; position: relative; z-index: 1; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); animation: titleFadeIn 1s ease-out 0.6s both; box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+
+/* Layouts & Glass Cards */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; flex-grow: 1;}
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; flex-grow: 1;}
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; flex-grow: 1;}
+.card {
+background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.8);
+transition: var(--transition); position: relative; overflow: hidden; box-shadow: var(--shadow-md);
+display: flex; flex-direction: column;
+}
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--purple-gradient); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;}
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+.card:hover::before { transform: scaleX(1); }
+.card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.card-icon { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; transition: var(--transition-bounce); box-shadow: var(--shadow-sm);}
+.card:hover .card-icon { transform: scale(1.1) rotate(5deg); }
+.card-icon.purple { background: var(--purple-light); color: var(--purple-primary); }
+.card-icon.green { background: var(--emerald-light); color: var(--emerald); }
+.card-icon.orange { background: var(--amber-light); color: var(--amber); }
+.card-icon.red { background: var(--rose-light); color: var(--rose); }
+.card-icon.blue { background: var(--blue-light); color: var(--blue); }
+.card-icon.teal { background: var(--teal-light); color: var(--teal); }
+.card-icon.pink { background: var(--pink-light); color: var(--pink); }
+.card-icon.indigo { background: var(--indigo-light); color: var(--indigo); }
+.card-title { font-weight: 800; color: var(--text-primary); font-size: 1.4rem; letter-spacing: -0.3px;}
+
+/* Stats */
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+.stat-card { background: linear-gradient(135deg, #ffffff 0%, var(--bg-surface) 100%); border-radius: 16px; padding: 1.75rem; text-align: center; border-left: 6px solid var(--purple-primary); transition: var(--transition); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); border-top: 1px solid white; border-right: 1px solid white;}
+.stat-card::after { content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: var(--purple-light); border-radius: 0 0 0 100%; opacity: 0.5; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.stat-value { font-size: 2.8rem; font-weight: 900; background: var(--purple-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; position: relative; z-index: 1; letter-spacing: -1px;}
+.stat-label { font-size: 1rem; color: var(--text-muted); font-weight: 700; position: relative; z-index: 1; text-transform: uppercase; letter-spacing: 0.5px;}
+
+/* Tables & Badges */
+.data-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 1.1rem; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); background: white;}
+.data-table th { background: var(--purple-gradient); color: white; padding: 1.25rem 1.5rem; text-align: left; font-weight: 700; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.5px; }
+.data-table td { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--bg-surface); color: var(--text-secondary); transition: var(--transition); }
+.data-table tr:hover td { background: var(--purple-light); }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr.highlight { background: linear-gradient(90deg, var(--purple-light) 0%, rgba(231, 227, 252, 0.5) 100%); }
+.data-table tr.highlight td { color: var(--purple-dark); font-weight: 700; }
+.data-table tr.success-row td { background: var(--emerald-light); }
+.data-table tr.warning-row td { background: var(--amber-light); }
+.data-table tr.danger-row td { background: var(--rose-light); }
+.badge { display: inline-flex; align-items: center; padding: 0.5rem 1.2rem; font-size: 0.85rem; font-weight: 800; border-radius: 50px; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; transition: var(--transition); box-shadow: var(--shadow-sm);}
+.badge:hover { transform: scale(1.05); }
+.badge-success { background: linear-gradient(135deg, var(--emerald-light) 0%, #a7f3d0 100%); color: #065f46; border: 1px solid #6ee7b7;}
+.badge-warning { background: linear-gradient(135deg, var(--amber-light) 0%, #fde68a 100%); color: #92400e; border: 1px solid #fcd34d;}
+.badge-danger { background: linear-gradient(135deg, var(--rose-light) 0%, #fecaca 100%); color: #991b1b; border: 1px solid #fca5a5;}
+.badge-purple { background: linear-gradient(135deg, var(--purple-light) 0%, #ddd6fe 100%); color: var(--purple-dark); border: 1px solid #c4b5fd;}
+.badge-blue { background: linear-gradient(135deg, var(--blue-light) 0%, #bfdbfe 100%); color: #1e40af; border: 1px solid #93c5fd;}
+.badge-teal { background: linear-gradient(135deg, var(--teal-light) 0%, #99f6e4 100%); color: #115e59; border: 1px solid #5eead4;}
+
+/* Lists with Staggered Animation */
+.feature-list { list-style: none; padding: 0; font-size: 1.1rem; }
+.feature-list li {
+padding: 1rem 0; padding-left: 2.75rem; position: relative; color: var(--text-secondary);
+border-bottom: 1px solid var(--bg-surface); transition: var(--transition);
+animation: slideInRight 0.5s ease-out forwards; opacity: 0; line-height: 1.5;
+}
+.feature-list li:nth-child(1) { animation-delay: 0.1s; }
+.feature-list li:nth-child(2) { animation-delay: 0.2s; }
+.feature-list li:nth-child(3) { animation-delay: 0.3s; }
+.feature-list li:nth-child(4) { animation-delay: 0.4s; }
+.feature-list li:nth-child(5) { animation-delay: 0.5s; }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+.feature-list li:hover { background: var(--bg-surface); padding-left: 3rem; border-radius: 8px;}
+.feature-list li:last-child { border-bottom: none; }
+.feature-list li::before { content: '✓'; position: absolute; left: 0.75rem; color: var(--emerald); font-weight: 900; font-size: 1.3rem; }
+.feature-list li.warning::before { content: '⚠'; color: var(--amber); }
+.feature-list li.danger::before { content: '✗'; color: var(--rose); }
+
+/* Charts */
+.chart-container { position: relative; width: 100%; padding: 1rem; background: white; border-radius: 16px; margin-top: 1rem; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); flex-grow: 1;}
+.chart-container.small { min-height: 280px; }
+.chart-container.medium { min-height: 350px; }
+.chart-container.large { min-height: 500px; }
+
+/* Pillars & Imperatives */
+.pillar { background: linear-gradient(135deg, #ffffff 0%, var(--bg-surface) 100%); border-radius: 20px; padding: 2rem; border: 1px solid rgba(102, 16, 242, 0.1); position: relative; overflow: hidden; transition: var(--transition); box-shadow: var(--shadow-md);}
+.pillar:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.pillar::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--purple-gradient); }
+.pillar-number { width: 44px; height: 44px; background: var(--purple-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.2rem; margin-bottom: 1.25rem; box-shadow: 0 4px 15px rgba(102, 16, 242, 0.3); }
+.pillar h4 { color: var(--purple-primary); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.3px;}
+.pillar p { color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; }
+.imperative { background: linear-gradient(135deg, var(--purple-light) 0%, rgba(231, 227, 252, 0.4) 100%); border-radius: 20px; padding: 2rem; margin-bottom: 1.5rem; border-left: 8px solid var(--purple-primary); position: relative; transition: var(--transition); box-shadow: var(--shadow-sm);}
+.imperative:hover { transform: translateX(5px); box-shadow: var(--shadow-md); }
+.imperative-number { position: absolute; top: -16px; left: 24px; background: var(--purple-gradient); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(102, 16, 242, 0.4); }
+.imperative h4 { color: var(--purple-dark); font-size: 1.3rem; margin-bottom: 0.75rem; margin-top: 0.5rem; font-weight: 800; }
+.imperative p { color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; }
+
+/* Five Forces Diagram */
+.forces-container { display: grid; grid-template-areas: ". top ." "left center right" ". bottom ."; grid-template-columns: 1fr 1.6fr 1fr; grid-template-rows: auto 1fr auto; gap: 1.5rem; padding: 1rem; height: 100%; align-content: center;}
+.force-card { background: white; border-radius: 16px; padding: 1.75rem; text-align: center; border: 4px solid transparent; transition: var(--transition); position: relative; overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.force-card:hover { transform: scale(1.03); z-index: 10; box-shadow: var(--shadow-xl);}
+.force-card.top { grid-area: top; } .force-card.left { grid-area: left; } .force-card.right { grid-area: right; } .force-card.bottom { grid-area: bottom; }
+.force-card.center { grid-area: center; background: var(--purple-gradient); color: white; box-shadow: 0 10px 30px rgba(102, 16, 242, 0.4); border: none;}
+.force-card.moderate { border-color: var(--amber); background: linear-gradient(135deg, #ffffff 0%, var(--amber-light) 100%); }
+.force-card.strong { border-color: var(--rose); background: linear-gradient(135deg, #ffffff 0%, var(--rose-light) 100%); }
+.force-card.weak { border-color: var(--emerald); background: linear-gradient(135deg, #ffffff 0%, var(--emerald-light) 100%); }
+.force-title { font-weight: 800; font-size: 1.2rem; margin-bottom: 0.8rem; }
+.force-rating { font-size: 0.9rem; font-weight: 800; padding: 0.4rem 1rem; border-radius: 50px; display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: var(--shadow-sm);}
+
+/* ================= INTERACTIVE COMPONENTS ================= */
+/* Interactive Tabs (PESTEL) */
+.tabs-container { display: flex; flex-direction: column; gap: 1.5rem; height: 100%; }
+.tab-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.tab-btn {
+padding: 1rem 2rem; border: 1px solid rgba(0,0,0,0.05); border-radius: 50px; background: white;
+color: var(--text-secondary); font-weight: 700; cursor: pointer; transition: var(--transition);
+box-shadow: var(--shadow-sm); font-size: 1.1rem;
+}
+.tab-btn:hover { background: var(--purple-light); color: var(--purple-primary); transform: translateY(-2px); }
+.tab-btn.active { background: var(--purple-gradient); color: white; box-shadow: 0 4px 15px rgba(102, 16, 242, 0.4); border: none;}
+.tab-content { display: none; animation: fadeIn 0.4s ease-out; height: 100%; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Interactive SWOT Matrix */
+.swot-matrix { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2rem; height: 100%; }
+.swot-quadrant {
+border-radius: 20px; padding: 2.5rem; position: relative; overflow: hidden; cursor: pointer;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column;
+box-shadow: var(--shadow-md); background: white;
+}
+.swot-quadrant::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; transition: opacity 0.4s ease; }
+.swot-quadrant:hover { transform: scale(1.02); z-index: 10; box-shadow: var(--shadow-xl); }
+.swot-quadrant:hover::before { opacity: 0.2; }
+.swot-s { background: linear-gradient(135deg, #ffffff 0%, var(--emerald-light) 100%); border-top: 8px solid var(--emerald); }
+.swot-w { background: linear-gradient(135deg, #ffffff 0%, var(--amber-light) 100%); border-top: 8px solid var(--amber); }
+.swot-o { background: linear-gradient(135deg, #ffffff 0%, var(--blue-light) 100%); border-top: 8px solid var(--blue); }
+.swot-t { background: linear-gradient(135deg, #ffffff 0%, var(--rose-light) 100%); border-top: 8px solid var(--rose); }
+.swot-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.swot-letter { font-size: 5rem; font-weight: 900; opacity: 0.15; position: absolute; right: 1.5rem; top: 1.5rem; }
+.swot-title { font-size: 2rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.5px;}
+.swot-details { opacity: 0.8; transition: opacity 0.3s ease; }
+.swot-quadrant:hover .swot-details { opacity: 1; }
+
+/* Flip Cards (Value Proposition) */
+.flip-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; perspective: 1000px; height: 100%; min-height: 450px;}
+.flip-card { width: 100%; height: 100%; position: relative; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; cursor: pointer; }
+.flip-card:hover { transform: rotateY(180deg); }
+.flip-front, .flip-back {
+position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 20px;
+padding: 2.5rem; display: flex; flex-direction: column; box-shadow: var(--shadow-lg);
+}
+.flip-front { background: linear-gradient(135deg, #ffffff 0%, var(--bg-surface) 100%); border: 1px solid rgba(102, 16, 242, 0.1); align-items: center; justify-content: center; text-align: center; }
+.flip-back { background: var(--purple-gradient); color: white; transform: rotateY(180deg); justify-content: center; }
+.flip-icon { font-size: 4.5rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));}
+.flip-title { font-size: 1.8rem; font-weight: 800; color: var(--purple-primary); margin-bottom: 0.75rem; letter-spacing: -0.5px;}
+.flip-back .flip-title { color: white; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 0.75rem; }
+.flip-desc { font-size: 1.15rem; line-height: 1.6; color: rgba(255,255,255,0.95); }
+.flip-stat { background: rgba(255,255,255,0.2); padding: 0.75rem; border-radius: 8px; margin-top: 1.5rem; font-weight: 800; text-align: center; backdrop-filter: blur(5px); font-size: 1.1rem;}
+
+/* Infographic Elements */
+.info-box { background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); position: relative; overflow: hidden; border-left: 6px solid var(--purple-primary); }
+.info-box-title { font-size: 1.3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem; }
+.info-box-value { font-size: 3.5rem; font-weight: 900; background: var(--purple-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px;}
+.info-box-sub { font-size: 1.1rem; color: var(--text-muted); font-weight: 600;}
+
+/* CSS Drawings for New Slides */
+.grid-drawing {
+width: 100%; height: 250px; border-radius: 12px; position: relative; overflow: hidden;
+background: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(102, 16, 242, 0.3) 19px, rgba(102, 16, 242, 0.3) 20px),
+repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(102, 16, 242, 0.3) 19px, rgba(102, 16, 242, 0.3) 20px);
+background-color: rgba(102, 16, 242, 0.05);
+border: 2px solid var(--purple-primary);
+box-shadow: inset 0 0 20px rgba(102, 16, 242, 0.1);
+}
+.airflow-arrow {
+position: absolute; bottom: -20px; width: 6px; height: 50px; background: var(--blue);
+border-radius: 4px; animation: floatUp 2s infinite ease-in; opacity: 0;
+}
+.airflow-arrow::after {
+content: ''; position: absolute; top: -6px; left: -6px; border-left: 9px solid transparent;
+border-right: 9px solid transparent; border-bottom: 12px solid var(--blue);
+}
+@keyframes floatUp {
+0% { transform: translateY(0); opacity: 0; }
+20% { opacity: 1; }
+80% { opacity: 1; }
+100% { transform: translateY(-220px); opacity: 0; }
+}
+.foam-drawing {
+width: 100%; height: 250px; border-radius: 12px; position: relative; overflow: hidden;
+background: #e5e7eb; border: 2px solid #9ca3af;
+display: flex; align-items: center; justify-content: center;
+box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+}
+.heat-trap {
+width: 80%; height: 80%; border-radius: 50%;
+background: radial-gradient(circle, rgba(239,68,68,0.8) 0%, rgba(239,68,68,0) 70%);
+animation: pulseHeat 3s infinite alternate;
+}
+@keyframes pulseHeat {
+0% { transform: scale(0.9); opacity: 0.7; }
+100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Customer Journey Flowchart */
+.journey-container { display: flex; justify-content: space-between; align-items: flex-start; position: relative; margin-top: 3rem; padding-top: 1rem; }
+.journey-container::before {
+content: ''; position: absolute; top: 40px; left: 5%; right: 5%; height: 6px;
+background: linear-gradient(90deg, var(--blue) 0%, var(--purple-primary) 50%, var(--emerald) 100%); z-index: 0;
+}
+.journey-stage {
+width: 18%; display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 1;
+transition: transform 0.3s ease; cursor: pointer;
+}
+.journey-stage:hover { transform: translateY(-10px); }
+.stage-circle {
+width: 80px; height: 80px; border-radius: 50%; background: white; border: 5px solid var(--purple-primary);
+display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.6rem;
+color: var(--purple-primary); margin-bottom: 1.5rem; box-shadow: var(--shadow-md);
+}
+.stage-title { font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem; }
+.stage-box {
+background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 10px;
+padding: 1rem; width: 100%; font-size: 1rem; color: var(--text-secondary); box-shadow: var(--shadow-sm); font-weight: 600;
+}
+.stage-box.digital { border-top: 4px solid var(--blue); }
+.stage-box.physical { border-top: 4px solid var(--emerald); }
+
+/* Portfolio Pyramid */
+.portfolio-pyramid { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
+.pyramid-tier {
+display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem;
+border-radius: 12px; color: white; font-weight: 800; transition: all 0.3s ease; cursor: pointer;
+box-shadow: var(--shadow-md); font-size: 1.2rem;
+}
+.pyramid-tier:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+.tier-ultra { width: 60%; background: linear-gradient(135deg, #4c1c91 0%, #6610f2 100%); }
+.tier-premium { width: 75%; background: linear-gradient(135deg, #6610f2 0%, #9d4edd 100%); }
+.tier-mid { width: 90%; background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%); }
+.tier-budget { width: 100%; background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%); color: white; opacity: 0.7; }
+
+/* Success Formula Venn/Pillars */
+.formula-container { display: flex; justify-content: center; align-items: center; gap: 3rem; margin-top: 3rem; }
+.formula-pillar {
+background: white; border-radius: 50%; width: 280px; height: 280px;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+text-align: center; padding: 2.5rem; box-shadow: var(--shadow-lg);
+border: 5px solid transparent; transition: all 0.4s ease; position: relative;
+}
+.formula-pillar:hover { transform: scale(1.05); z-index: 10; }
+.formula-pillar.tech { border-color: var(--purple-primary); background: linear-gradient(135deg, #ffffff 0%, var(--purple-light) 100%); }
+.formula-pillar.omni { border-color: var(--blue); background: linear-gradient(135deg, #ffffff 0%, var(--blue-light) 100%); }
+.formula-pillar.ops { border-color: var(--emerald); background: linear-gradient(135deg, #ffffff 0%, var(--emerald-light) 100%); }
+.formula-icon { font-size: 3.5rem; margin-bottom: 0.75rem; }
+.formula-title { font-weight: 800; font-size: 1.3rem; color: var(--text-primary); line-height: 1.2; }
+.formula-plus { font-size: 4rem; font-weight: 900; color: var(--text-muted); opacity: 0.3; }
+
+/* Utilities */
+.slide-number { position: absolute; bottom: 1.5rem; right: 2rem; font-size: 1.1rem; color: var(--text-muted); font-weight: 700; }
+.keyboard-hint { position: fixed; bottom: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.85); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; font-size: 1rem; opacity: 0.8; backdrop-filter: blur(10px); z-index: 2000;}
+.keyboard-hint kbd { background: rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 5px; margin: 0 0.3rem; font-weight: 600; }
+
+/* Export Modal */
+.export-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 3000; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+.export-modal.active { display: flex; }
+.export-modal-content { background: white; padding: 3rem; border-radius: 20px; text-align: center; box-shadow: var(--shadow-xl); max-width: 500px; }
+.export-spinner { width: 70px; height: 70px; border: 5px solid var(--bg-surface); border-top-color: var(--purple-primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem; }
+.export-progress { width: 100%; height: 10px; background: var(--bg-surface); border-radius: 5px; margin-top: 1.5rem; overflow: hidden; }
+.export-progress-bar { height: 100%; background: var(--purple-gradient); border-radius: 5px; transition: width 0.3s ease; width: 0%; }
+
+/* References Slides (39 & 40) */
+.apa-references { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; }
+.reference { padding-left: 2.5rem; text-indent: -2.5rem; margin-bottom: 1.5rem; break-inside: avoid; }
+
+/* Conclusion Slide (41) */
+.thank-you-slide { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; background: var(--purple-gradient-dark); position: relative; overflow: hidden; border-radius: 24px; }
+.thank-you-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: patternMove 20s linear infinite; }
+.thank-you-slide h2 { font-size: 6rem; color: white; font-weight: 900; margin-bottom: 0.5rem; position: relative; z-index: 1; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+.thank-you-slide h3 { font-size: 2.5rem; color: rgba(255,255,255,0.95); font-weight: 500; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+.thank-you-slide p { color: rgba(255,255,255,0.85); font-size: 1.3rem; position: relative; z-index: 1; }
+
+/* Print styles */
+@media print {
+.nav-container, .progress-container, .keyboard-hint, .export-modal { display: none !important; }
+.presentation-area { padding: 0 !important; display: block !important; height: auto !important; overflow: visible !important; }
+.slides-wrapper { transform: none !important; width: 100% !important; height: auto !important; }
+.slide { display: block !important; position: relative !important; page-break-after: always; box-shadow: none; border: none; width: 1366px !important; height: 768px !important; }
+.flip-card { transform: none !important; }
+.flip-back { display: none !important; }
+.tab-content { display: block !important; opacity: 1 !important; margin-bottom: 1rem; }
+.tab-buttons { display: none !important; }
+.feature-list li { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="export-modal" id="exportModal">
+<div class="export-modal-content">
+<div class="export-spinner"></div>
+<h3 id="exportTitle">Generating PDF...</h3>
+<p id="exportStatus">Please wait while we prepare your file</p>
+<div class="export-progress"><div class="export-progress-bar" id="exportProgressBar"></div></div>
+</div>
+</div>
+<nav class="nav-container">
+<div class="nav-brand">
+<div class="nav-logo">P</div>
+<span class="nav-title">Purple Innovation Strategic Analysis</span>
+</div>
+<div class="nav-controls">
+<button class="nav-btn" onclick="prevSlide()">← Prev</button>
+<span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">41</span></span>
+<button class="nav-btn" onclick="nextSlide()">Next →</button>
+<div class="export-controls">
+<button class="export-btn pdf" onclick="exportToPDF()" id="pdfBtn">📄 PDF</button>
+<button class="export-btn pptx" onclick="exportToPPTX()" id="pptxBtn">📊 PPTX</button>
+</div>
+</div>
+</nav>
+<div class="progress-container">
+<div class="progress-bar" id="progressBar" style="width: 2.4%"></div>
+</div>
+
+<!-- NEW PRESENTATION AREA FOR AUTO-SCALING -->
+<div class="presentation-area">
+<div class="slides-wrapper" id="slidesWrapper">
+
+<!-- Slide 1: Title -->
+<section class="slide active" data-slide="1">
+<div class="title-slide">
+<h1>Purple Innovation, Inc.</h1>
+<h2>Industry & Competitive Analysis</h2>
+<p>Strategic Assessment of the Online-to-Offline Marketing Transition</p>
+<div class="date-badge">📊 Data Current Through Q3 2025 | March 2026</div>
+</div>
+<div class="slide-number">1 / 41</div>
+</section>
+<!-- Slide 2: Agenda -->
+<section class="slide" data-slide="2">
+<div class="slide-header">
+<h2>📋 Presentation Agenda</h2>
+<p class="subtitle">Comprehensive strategic analysis framework</p>
+</div>
+<div class="slide-content">
+<div class="grid-3">
+<div class="card"><div class="card-header"><div class="card-icon purple">1</div><span class="card-title">Industry Overview</span></div><p style="color: var(--text-secondary);">Market structure & metrics</p></div>
+<div class="card"><div class="card-header"><div class="card-icon blue">2</div><span class="card-title">PESTEL Analysis</span></div><p style="color: var(--text-secondary);">Macro-environmental factors</p></div>
+<div class="card"><div class="card-header"><div class="card-icon teal">3</div><span class="card-title">Porter's Five Forces</span></div><p style="color: var(--text-secondary);">Industry attractiveness</p></div>
+<div class="card"><div class="card-header"><div class="card-icon pink">4</div><span class="card-title">SWOT & Value Prop</span></div><p style="color: var(--text-secondary);">Internal capabilities & pillars</p></div>
+<div class="card"><div class="card-header"><div class="card-icon orange">5</div><span class="card-title">Competitor Analysis</span></div><p style="color: var(--text-secondary);">Positioning & value curves</p></div>
+<div class="card"><div class="card-header"><div class="card-icon green">6</div><span class="card-title">Key Success Factors</span></div><p style="color: var(--text-secondary);">Strategic imperatives 2026-2029</p></div>
+</div>
+</div>
+<div class="slide-number">2 / 41</div>
+</section>
+<!-- Slide 3: Industry Overview -->
+<section class="slide" data-slide="3">
+<div class="slide-header">
+<h2>🏭 U.S. Mattress Industry Overview</h2>
+<p class="subtitle">NAICS 337910 — Mattress Manufacturing</p>
+</div>
+<div class="slide-content">
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-value">$9.3B</div><div class="stat-label">Manufacturing Revenue</div></div>
+<div class="stat-card"><div class="stat-value">$18.77B</div><div class="stat-label">U.S. Retail (2026)</div></div>
+<div class="stat-card"><div class="stat-value">314</div><div class="stat-label">Industry Businesses</div></div>
+<div class="stat-card"><div class="stat-value">45-50%</div><div class="stat-label">Top 4 Market Share</div></div>
+</div>
+<div class="grid-2">
+<div class="card">
+<div class="card-header"><div class="card-icon green">📈</div><span class="card-title">Market Growth Projection</span></div>
+<div class="chart-container small"><canvas id="marketGrowthChart"></canvas></div>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon orange">⚡</div><span class="card-title">Market Dynamics</span></div>
+<ul class="feature-list">
+<li>Housing market correlation drives demand</li>
+<li>30-35% of purchases linked to home moves</li>
+<li>DTC disruption reshaping distribution</li>
+<li class="warning">Consolidation intensifying (Somnigroup)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">3 / 41</div>
+</section>
+<!-- Slide 4: Company Profile -->
+<section class="slide" data-slide="4">
+<div class="slide-header">
+<h2>🟣 Purple Innovation, Inc. — Company Profile</h2>
+<p class="subtitle">Comfort technology innovator headquartered in Lehi, Utah</p>
+</div>
+<div class="slide-content">
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-value">$487.9M</div><div class="stat-label">FY2024 Revenue</div></div>
+<div class="stat-card"><div class="stat-value">42.8%</div><div class="stat-label">Q3 Gross Margin (+700 bps)</div></div>
+<div class="stat-card"><div class="stat-value">200+</div><div class="stat-label">Patents (GelFlex® Grid)</div></div>
+<div class="stat-card" style="border-left-color: var(--emerald);"><div class="stat-value" style="background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">$0.2M</div><div class="stat-label">Q3 Adj. EBITDA (First Ever!)</div></div>
+</div>
+<div class="grid-2">
+<div>
+<table class="data-table">
+<tr><td><strong>CEO</strong></td><td>Rob DeMartini</td></tr>
+<tr><td><strong>FY2025 Guidance</strong></td><td>$465–$485 million</td></tr>
+<tr><td><strong>Core Technology</strong></td><td>GelFlex® Grid (Hyper-Elastic Polymer)</td></tr>
+<tr><td><strong>Retail Presence</strong></td><td>58 showrooms + 3,000 partners</td></tr>
+<tr><td><strong>Mattress Firm Slots</strong></td><td>9,200 → 12,000 (Mid-2026)</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon purple">📊</div><span class="card-title">Gross Margin Improvement</span></div>
+<div class="chart-container small"><canvas id="marginChart"></canvas></div>
+</div>
+</div>
+</div>
+<div class="slide-number">4 / 41</div>
+</section>
+<!-- Slide 5: Path to Profitability -->
+<section class="slide" data-slide="5">
+<div class="slide-header">
+<h2>📈 Path to Profitability</h2>
+<p class="subtitle">Gross Margin Improvement Trend (Q1 2024 - Q3 2025)</p>
+</div>
+<div class="slide-content">
+<div class="card" style="height: 100%; border-top: 4px solid var(--purple-primary);">
+<div class="card-header">
+<div class="card-icon purple">🚀</div>
+<span class="card-title">Consecutive Quarter-over-Quarter Growth</span>
+<span class="badge badge-success" style="margin-left: auto;">+700 Basis Points</span>
+</div>
+<div class="chart-container large"><canvas id="marginTrendChart"></canvas></div>
+<div style="margin-top: 1.25rem; text-align: center; color: var(--text-secondary); background: var(--bg-surface); padding: 1rem; border-radius: 10px;">
+<strong style="color: var(--purple-primary);">Strategic Insight:</strong> The sustained expansion of gross margin from 36% to 42.8% highlights successful manufacturing efficiencies and a transition toward a premium product mix (e.g., Rejuvenate 2.0).
+</div>
+</div>
+</div>
+<div class="slide-number">5 / 41</div>
+</section>
+<!-- Slide 6: PESTEL Political & Economic -->
+<section class="slide" data-slide="6">
+<div class="slide-header">
+<h2>🌐 PESTEL Analysis: Political & Economic</h2>
+<p class="subtitle">Macro-environmental factors impacting Purple's strategy</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 4px solid var(--indigo);">
+<div class="card-header"><div class="card-icon indigo">🏛️</div><span class="card-title">Political Factors</span><span class="badge badge-purple" style="margin-left: auto;">HIGH IMPACT</span></div>
+<ul class="feature-list">
+<li>Somnigroup-Mattress Firm merger completed Jan 2025 ($5B deal)</li>
+<li>Purple secured expanded agreement: <strong>12,000 minimum slots</strong></li>
+<li>Domestic manufacturing provides <strong>tariff insulation</strong></li>
+<li>FTC scrutiny of industry consolidation ongoing</li>
+</ul>
+</div>
+<div class="card" style="border-top: 4px solid var(--amber);">
+<div class="card-header"><div class="card-icon orange">💰</div><span class="card-title">Economic Factors</span><span class="badge badge-warning" style="margin-left: auto;">HIGH IMPACT</span></div>
+<ul class="feature-list">
+<li class="warning">Housing market suppression (2022-2025) constrains demand</li>
+<li class="warning"><strong>30-35%</strong> of purchases linked to home moves</li>
+<li>Premiumization trend offsets volume with higher ASPs</li>
+<li>Interest rate trajectory improving outlook</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">6 / 41</div>
+</section>
+<!-- Slide 7: PESTEL Social & Technological -->
+<section class="slide" data-slide="7">
+<div class="slide-header">
+<h2>🌐 PESTEL Analysis: Social & Technological</h2>
+<p class="subtitle">Consumer trends and technology disruption</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 4px solid var(--emerald);">
+<div class="card-header"><div class="card-icon green">👥</div><span class="card-title">Social Factors</span><span class="badge badge-success" style="margin-left: auto;">OPPORTUNITY</span></div>
+<ul class="feature-list">
+<li><strong>75-80%</strong> of adults rate sleep "very important" to health</li>
+<li>Millennials (28-43) & Gen Z (18-27) entering household formation</li>
+<li>Digital fluency combined with need for physical product evaluation</li>
+<li>Sleep wellness becoming mainstream health priority</li>
+</ul>
+</div>
+<div class="card" style="border-top: 4px solid var(--purple-primary);">
+<div class="card-header"><div class="card-icon purple">🔬</div><span class="card-title">Technological Factors</span><span class="badge badge-purple" style="margin-left: auto;">MIXED</span></div>
+<ul class="feature-list">
+<li>GelFlex® Grid: <strong>200+ patents</strong>, DreamLayer innovation</li>
+<li>Rejuvenate 2.0 demonstrates continued R&D (3,000+ units at ~$5,800 ASP)</li>
+<li class="warning">Smart sleep technology emerging (Sleep Number 360® serves 15M+ users)</li>
+<li class="danger">Purple lacks AI/smart features — <strong>competitive gap</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">7 / 41</div>
+</section>
+<!-- NEW SLIDE 8: Demographic Shifts -->
+<section class="slide" data-slide="8">
+<div class="slide-header">
+<h2>👥 Demographic Shifts & Omnichannel Behavior</h2>
+<p class="subtitle">How Millennials and Gen Z are reshaping the purchase funnel</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="info-box" style="border-left-color: var(--blue);">
+<div class="info-box-title">The New Core Buyer</div>
+<div class="info-box-value" style="background: linear-gradient(135deg, var(--blue) 0%, var(--indigo) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Ages 18-43</div>
+<div class="info-box-sub">Millennials & Gen Z entering prime household formation</div>
+<p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1.1rem;">These cohorts demonstrate high digital fluency for research, but increasingly require physical product evaluation before committing to high-value purchases.</p>
+</div>
+<div class="info-box" style="border-left-color: var(--emerald);">
+<div class="info-box-title">The Omnichannel Reality</div>
+<div class="info-box-value" style="background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">70 / 30 Split</div>
+<div class="info-box-sub">Research vs. Purchase Channel</div>
+<p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1.1rem;"><strong>65-70%</strong> of premium buyers research online, but only <strong>30-35%</strong> buy digitally. This behavioral pattern perfectly validates Purple's strategic shift to expand Mattress Firm slots.</p>
+</div>
+</div>
+<div class="card" style="margin-top: 1.5rem; text-align: center; padding: 2rem;">
+<h3 style="color: var(--purple-primary); margin-bottom: 1rem;">The "Digital-to-Physical" Bridge</h3>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<div style="background: var(--bg-surface); padding: 1.25rem 2.5rem; border-radius: 50px; font-weight: 800; color: var(--blue); font-size: 1.2rem;">Online Research</div>
+<div style="font-size: 2.5rem; color: var(--text-muted);">➔</div>
+<div style="background: var(--purple-gradient); padding: 1.25rem 2.5rem; border-radius: 50px; font-weight: 800; color: white; box-shadow: var(--shadow-md); font-size: 1.2rem;">In-Store Trial (Mattress Firm)</div>
+<div style="font-size: 2.5rem; color: var(--text-muted);">➔</div>
+<div style="background: var(--bg-surface); padding: 1.25rem 2.5rem; border-radius: 50px; font-weight: 800; color: var(--emerald); font-size: 1.2rem;">Premium Purchase</div>
+</div>
+</div>
+</div>
+<div class="slide-number">8 / 41</div>
+</section>
+<!-- Slide 9: PESTEL Priority Ranking -->
+<section class="slide" data-slide="9">
+<div class="slide-header">
+<h2>📊 PESTEL Factor Priority Ranking</h2>
+<p class="subtitle">Strategic prioritization of macro-environmental factors</p>
+</div>
+<div class="slide-content">
+<table class="data-table">
+<thead>
+<tr><th style="width: 80px;">Rank</th><th>Factor</th><th>Category</th><th>Type</th><th>Time Horizon</th></tr>
+</thead>
+<tbody>
+<tr class="highlight"><td><strong>1</strong></td><td><strong>Sleep health consciousness movement</strong></td><td>Social</td><td><span class="badge badge-success">Opportunity</span></td><td>Long-term</td></tr>
+<tr><td><strong>2</strong></td><td>Housing market suppression</td><td>Economic</td><td><span class="badge badge-danger">Threat</span></td><td>Short-term</td></tr>
+<tr><td><strong>3</strong></td><td>Smart sleep technology disruption</td><td>Technological</td><td><span class="badge badge-danger">Threat</span></td><td>Medium-term</td></tr>
+<tr><td><strong>4</strong></td><td>Omnichannel distribution evolution</td><td>Technological</td><td><span class="badge badge-success">Opportunity</span></td><td>Medium-term</td></tr>
+<tr><td><strong>5</strong></td><td>Somnigroup consolidation impact</td><td>Political</td><td><span class="badge badge-warning">Mixed</span></td><td>Short-term</td></tr>
+</tbody>
+</table>
+</div>
+<div class="slide-number">9 / 41</div>
+</section>
+<!-- Slide 10: Interactive PESTEL Deep Dive -->
+<section class="slide" data-slide="10">
+<div class="slide-header">
+<h2>🔍 Interactive PESTEL Deep Dive</h2>
+<p class="subtitle">Click tabs to explore detailed macro-environmental impacts</p>
+</div>
+<div class="slide-content">
+<div class="tabs-container">
+<div class="tab-buttons">
+<button class="tab-btn active" onclick="openTab(event, 'pestel-p')">Political</button>
+<button class="tab-btn" onclick="openTab(event, 'pestel-e')">Economic</button>
+<button class="tab-btn" onclick="openTab(event, 'pestel-s')">Social</button>
+<button class="tab-btn" onclick="openTab(event, 'pestel-t')">Technological</button>
+<button class="tab-btn" onclick="openTab(event, 'pestel-env')">Environmental</button>
+<button class="tab-btn" onclick="openTab(event, 'pestel-l')">Legal</button>
+</div>
+<div class="card" style="flex-grow: 1; margin-top: 1rem;">
+<div id="pestel-p" class="tab-content active">
+<h3 style="color: var(--indigo); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">🏛️ Political Landscape</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Trade policy uncertainty and industry consolidation are the primary political drivers.</p>
+<ul class="feature-list">
+<li><strong>Tariff Insulation:</strong> Purple's vertically integrated Utah-based manufacturing provides strategic advantages against trade policy volatility affecting offshore-dependent competitors.</li>
+<li><strong>FTC Scrutiny:</strong> The $5B Somnigroup-Mattress Firm merger faced FTC challenges, highlighting regulatory focus on industry consolidation.</li>
+<li><strong>"Made in USA" Advantage:</strong> Domestic production appeals to nationalistic consumer preferences and secures supply chains.</li>
+</ul>
+</div>
+<div id="pestel-e" class="tab-content">
+<h3 style="color: var(--amber); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">💰 Economic Environment</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Macroeconomic headwinds are offset by specific consumer spending shifts.</p>
+<ul class="feature-list">
+<li class="warning"><strong>Housing Market:</strong> 30-35% of mattress purchases are linked to home moves. Elevated interest rates have suppressed turnover.</li>
+<li><strong>Premiumization Trend:</strong> Despite discretionary spending pressure, consumers are allocating larger per-purchase budgets for health-related items.</li>
+<li><strong>Margin Expansion:</strong> Purple achieved 42.8% gross margin in Q3 2025, proving economic resilience in the premium tier.</li>
+</ul>
+</div>
+<div id="pestel-s" class="tab-content">
+<h3 style="color: var(--emerald); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">👥 Social Trends</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">The shift toward health and wellness is Purple's strongest secular tailwind.</p>
+<ul class="feature-list">
+<li><strong>Sleep Health Consciousness:</strong> 75-80% of adults now rate sleep as "very important" to overall health.</li>
+<li><strong>Demographic Shifts:</strong> Millennials and Gen Z are entering prime household formation years with higher expectations for sleep technology.</li>
+<li><strong>Data-Driven Personalization:</strong> Consumers increasingly expect products to adapt to their specific physiological needs.</li>
+</ul>
+</div>
+<div id="pestel-t" class="tab-content">
+<h3 style="color: var(--purple-primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">🔬 Technological Disruption</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">The transition from passive furniture to active health devices.</p>
+<ul class="feature-list">
+<li><strong>Materials Innovation:</strong> Purple's GelFlex Grid and DreamLayer represent cutting-edge physical technology.</li>
+<li class="danger"><strong>Smart Sleep Disruption:</strong> Competitors like Sleep Number (15M+ SleepIQ users) are turning beds into biometric health platforms.</li>
+<li><strong>Omnichannel Tech:</strong> The 70/30 gap (70% research online, 30% buy online) requires seamless digital-to-physical retail technology.</li>
+</ul>
+</div>
+<div id="pestel-env" class="tab-content">
+<h3 style="color: var(--teal); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">🌱 Environmental Factors</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Sustainability is becoming a baseline expectation in manufacturing.</p>
+<ul class="feature-list">
+<li><strong>Material Sourcing:</strong> Hyper-Elastic Polymer production requires specific chemical inputs; managing the carbon footprint is essential.</li>
+<li><strong>End-of-Life:</strong> Mattress recycling and disposal regulations are tightening across various states.</li>
+<li><strong>Certifications:</strong> CleanAir and CertiPUR-US certifications are required to compete in the premium segment.</li>
+</ul>
+</div>
+<div id="pestel-l" class="tab-content">
+<h3 style="color: var(--rose); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem;">⚖️ Legal Considerations</h3>
+<p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Intellectual property protection is the foundation of Purple's moat.</p>
+<ul class="feature-list">
+<li><strong>Patent Portfolio Aging:</strong> Purple's 200+ patents are time-bounded, requiring continuous R&D to prevent competitive imitation.</li>
+<li><strong>Target:</strong> Expand patent portfolio in emerging technology areas to 250+ total patents by 2028.</li>
+<li><strong>Clinical Claims:</strong> Marketing health benefits (e.g., 68% pain reduction) requires strict adherence to FTC and FDA advertising guidelines.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">10 / 41</div>
+</section>
+<!-- Slide 11: Porter's Five Forces Overview -->
+<section class="slide" data-slide="11">
+<div class="slide-header">
+<h2>⚔️ Porter's Five Forces Analysis</h2>
+<p class="subtitle">Industry attractiveness assessment</p>
+</div>
+<div class="slide-content">
+<div class="forces-container">
+<div class="force-card top moderate">
+<div class="force-title">Threat of New Entrants</div>
+<span class="force-rating" style="background: linear-gradient(135deg, #ffffff 0%, var(--amber-light) 100%); color: #92400e;">MODERATE</span>
+<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.75rem;">200+ patent IP moat essential</p>
+</div>
+<div class="force-card left strong">
+<div class="force-title">Buyer Power</div>
+<span class="force-rating" style="background: linear-gradient(135deg, #ffffff 0%, var(--rose-light) 100%); color: #991b1b;">STRONG</span>
+<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.75rem;">Clinical validation critical</p>
+</div>
+<div class="force-card center">
+<div class="force-title" style="color: white; font-size: 1.5rem;">Competitive Rivalry</div>
+<span class="force-rating" style="background: rgba(255,255,255,0.25); color: white; font-size: 1.1rem; padding: 0.5rem 1.5rem;">VERY STRONG</span>
+<p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin-top: 1rem;">GelFlex® differentiation is existential</p>
+</div>
+<div class="force-card right weak">
+<div class="force-title">Supplier Power</div>
+<span class="force-rating" style="background: linear-gradient(135deg, #ffffff 0%, var(--emerald-light) 100%); color: #065f46;">WEAK-MOD</span>
+<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.75rem;">Proprietary polymer = advantage</p>
+</div>
+<div class="force-card bottom moderate">
+<div class="force-title">Threat of Substitutes</div>
+<span class="force-rating" style="background: linear-gradient(135deg, #ffffff 0%, var(--amber-light) 100%); color: #92400e;">MODERATE</span>
+<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.75rem;">Smart mattress/AI gap requires response</p>
+</div>
+</div>
+</div>
+<div class="slide-number">11 / 41</div>
+</section>
+<!-- Slide 12: Porter's Five Forces Detailed -->
+<section class="slide" data-slide="12">
+<div class="slide-header">
+<h2>⚔️ Porter's Five Forces: Detailed Analysis</h2>
+<p class="subtitle">Strategic implications for Purple Innovation</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-left: 6px solid var(--emerald);">
+<div class="card-header"><div class="card-icon green">✓</div><span class="card-title">Favorable Forces</span></div>
+<ul class="feature-list">
+<li><strong>Supplier Power (Weak-Mod):</strong> Proprietary Hyper-Elastic Polymer internally controlled</li>
+<li>Utah manufacturing reduces external dependency</li>
+<li><strong>New Entrants (Moderate):</strong> 200+ patents create premium segment barrier</li>
+<li>Somnigroup consolidation raised distribution barriers for new DTC entrants</li>
+</ul>
+</div>
+<div class="card" style="border-left: 6px solid var(--rose);">
+<div class="card-header"><div class="card-icon red">⚠</div><span class="card-title">Challenging Forces</span></div>
+<ul class="feature-list">
+<li class="danger"><strong>Buyer Power (Strong):</strong> 100-night trials eliminate switching costs</li>
+<li class="danger"><strong>Rivalry (Very Strong):</strong> Somnigroup = 10x Purple's revenue</li>
+<li class="warning"><strong>Substitutes (Moderate):</strong> Smart beds emerging as wellness platforms</li>
+<li class="danger">Sleep Number's SleepIQ® serves 15M+ users with health data ecosystem</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">12 / 41</div>
+</section>
+<!-- Slide 13: SWOT Analysis Summary -->
+<section class="slide" data-slide="13">
+<div class="slide-header">
+<h2>🎯 SWOT Analysis Summary</h2>
+<p class="subtitle">Purple Innovation's strategic position assessment</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 6px solid var(--emerald);">
+<div class="card-header"><div class="card-icon green">💪</div><span class="card-title">Strengths</span></div>
+<ul class="feature-list">
+<li>200+ patent portfolio (GelFlex Grid)</li>
+<li>Clinical validation: 68% pain reduction</li>
+<li>Domestic Utah manufacturing</li>
+<li>Q3 2025: 42.8% gross margin (700 bps ↑)</li>
+</ul>
+</div>
+<div class="card" style="border-top: 6px solid var(--amber);">
+<div class="card-header"><div class="card-icon orange">⚠️</div><span class="card-title">Weaknesses</span></div>
+<ul class="feature-list">
+<li class="warning">No smart/AI sleep technology</li>
+<li class="warning">2-3% market share vs. Somnigroup 25-30%</li>
+<li class="warning">58 showrooms vs. Sleep Number 650</li>
+<li class="warning">Recent losses: -$97.9M FY2024</li>
+</ul>
+</div>
+<div class="card" style="border-top: 6px solid var(--teal);">
+<div class="card-header"><div class="card-icon teal">🚀</div><span class="card-title">Opportunities</span></div>
+<ul class="feature-list">
+<li>Sleep health consciousness: 75-80% priority</li>
+<li>Premiumization trend (5-6% CAGR)</li>
+<li>Omnichannel consumer behavior shift</li>
+<li>$70M incremental revenue from Mattress Firm</li>
+</ul>
+</div>
+<div class="card" style="border-top: 6px solid var(--rose);">
+<div class="card-header"><div class="card-icon red">⚡</div><span class="card-title">Threats</span></div>
+<ul class="feature-list">
+<li class="danger">Sleep Number's 15M connected users (SleepIQ)</li>
+<li class="danger">Somnigroup scale: 10x Purple revenue</li>
+<li class="danger">Patent portfolio aging</li>
+<li class="danger">Housing market remained weak 2025</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">13 / 41</div>
+</section>
+<!-- Slide 14: Interactive SWOT Matrix -->
+<section class="slide" data-slide="14">
+<div class="slide-header">
+<h2>🧩 Interactive SWOT Matrix</h2>
+<p class="subtitle">Hover over quadrants to reveal strategic implications</p>
+</div>
+<div class="slide-content">
+<div class="swot-matrix">
+<div class="swot-quadrant swot-s">
+<div class="swot-letter">S</div>
+<div class="swot-header"><span class="swot-title">Strengths</span></div>
+<div class="swot-details">
+<p style="font-weight: 700; color: var(--emerald); margin-bottom: 0.75rem; font-size: 1.2rem;">Leverage to Win:</p>
+<p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;">Purple must aggressively market its <strong>SleepScore Labs clinical validation (68% pain reduction)</strong>. The proprietary GelFlex Grid and Utah manufacturing allow for superior unit economics (42.8% gross margin) and rapid innovation cycles compared to contract-manufactured DTC brands.</p>
+</div>
+</div>
+<div class="swot-quadrant swot-w">
+<div class="swot-letter">W</div>
+<div class="swot-header"><span class="swot-title">Weaknesses</span></div>
+<div class="swot-details">
+<p style="font-weight: 700; color: var(--amber); margin-bottom: 0.75rem; font-size: 1.2rem;">Mitigate to Survive:</p>
+<p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;">The lack of <strong>Smart Sleep Technology</strong> is a critical gap. Purple must invest 3-4% of revenue into R&D to develop a smart pilot by 2027. Additionally, the massive distribution deficit (58 stores vs 650+) requires heavy reliance on the Mattress Firm partnership.</p>
+</div>
+</div>
+<div class="swot-quadrant swot-o">
+<div class="swot-letter">O</div>
+<div class="swot-header"><span class="swot-title">Opportunities</span></div>
+<div class="swot-details">
+<p style="font-weight: 700; color: var(--blue); margin-bottom: 0.75rem; font-size: 1.2rem;">Invest to Grow:</p>
+<p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;">The <strong>Premiumization Trend</strong> allows Purple to push higher ASP products like Rejuvenate 2.0 (~$5,800). The 12,000 Mattress Firm slots provide a massive offline footprint to capture the 70% of consumers who research online but buy in-store.</p>
+</div>
+</div>
+<div class="swot-quadrant swot-t">
+<div class="swot-letter">T</div>
+<div class="swot-header"><span class="swot-title">Threats</span></div>
+<div class="swot-details">
+<p style="font-weight: 700; color: var(--rose); margin-bottom: 0.75rem; font-size: 1.2rem;">Defend Against:</p>
+<p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>Somnigroup's scale (10x revenue)</strong> and Sleep Number's data advantage (15M users) threaten to marginalize Purple. Patent aging means the 200+ patent moat is time-bounded, requiring constant renewal to prevent cheap imitation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">14 / 41</div>
+</section>
+<!-- Slide 15: GelFlex vs Memory Foam Visual -->
+<section class="slide" data-slide="15">
+<div class="slide-header">
+<h2>🔬 Technology Comparison: The Heat Problem</h2>
+<p class="subtitle">Why GelFlex® Grid outperforms traditional memory foam</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 6px solid var(--purple-primary);">
+<h3 style="color: var(--purple-primary); text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem;">Purple GelFlex® Grid</h3>
+<div class="grid-drawing">
+<div class="airflow-arrow" style="left: 20%; animation-delay: 0s;"></div>
+<div class="airflow-arrow" style="left: 40%; animation-delay: 0.5s;"></div>
+<div class="airflow-arrow" style="left: 60%; animation-delay: 1s;"></div>
+<div class="airflow-arrow" style="left: 80%; animation-delay: 1.5s;"></div>
+</div>
+<div style="margin-top: 2rem; text-align: center;">
+<div class="badge badge-purple" style="font-size: 1.2rem; padding: 0.75rem 1.5rem; margin-bottom: 1.5rem;">10x Better Airflow</div>
+<p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">Open-cell hyper-elastic polymer structure allows body heat to dissipate instantly, maintaining temperature neutrality.</p>
+</div>
+</div>
+<div class="card" style="border-top: 6px solid var(--rose);">
+<h3 style="color: var(--rose); text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem;">Traditional Memory Foam</h3>
+<div class="foam-drawing">
+<div class="heat-trap"></div>
+</div>
+<div style="margin-top: 2rem; text-align: center;">
+<div class="badge badge-danger" style="font-size: 1.2rem; padding: 0.75rem 1.5rem; margin-bottom: 1.5rem;">Heat Trapping</div>
+<p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">Dense polyurethane foam absorbs and retains body heat, causing the #1 consumer complaint: "sleeping hot."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">15 / 41</div>
+</section>
+<!-- Slide 16: Market Segmentation -->
+<section class="slide" data-slide="16">
+<div class="slide-header">
+<h2>📊 Market Segmentation by Price Tier</h2>
+<p class="subtitle">Purple targets the fastest-growing premium segments</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div>
+<table class="data-table">
+<thead>
+<tr><th>Segment</th><th>Price Range</th><th>Share</th><th>Growth</th></tr>
+</thead>
+<tbody>
+<tr><td>Budget</td><td>Under $500</td><td>25%</td><td>1-2%</td></tr>
+<tr><td>Mid-Market</td><td>$500–$1,200</td><td>40%</td><td>3-4%</td></tr>
+<tr class="highlight"><td><strong>Premium</strong></td><td><strong>$1,200–$3,000</strong></td><td><strong>25%</strong></td><td><strong>5-6%</strong></td></tr>
+<tr class="highlight"><td><strong>Ultra-Premium</strong></td><td><strong>$3,000+</strong></td><td><strong>10%</strong></td><td><strong>6-8%</strong></td></tr>
+</tbody>
+</table>
+<div style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, var(--emerald-light) 0%, #a7f3d0 100%); border-radius: 12px;">
+<strong style="color: #065f46; font-size: 1.2rem;">Rejuvenate 2.0 Success:</strong>
+<p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.1rem;">3,000+ units sold at ~$5,800 ASP demonstrates ultra-premium viability</p>
+</div>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon purple">📈</div><span class="card-title">Market Share by Segment</span></div>
+<div class="chart-container medium"><canvas id="segmentChart"></canvas></div>
+</div>
+</div>
+</div>
+<div class="slide-number">16 / 41</div>
+</section>
+<!-- Slide 17: Product Portfolio Pyramid -->
+<section class="slide" data-slide="17">
+<div class="slide-header">
+<h2>🔺 Purple Product Portfolio</h2>
+<p class="subtitle">Strategic Price Tier Coverage ($1,000 - $6,000+)</p>
+</div>
+<div class="slide-content">
+<div class="card" style="padding: 3rem; flex-grow: 1; justify-content: center;">
+<h3 style="text-align: center; color: var(--text-primary); margin-bottom: 2rem; font-size: 1.8rem;">Broad Premium Coverage Without Budget Commoditization</h3>
+<div class="portfolio-pyramid">
+<div class="pyramid-tier tier-ultra">
+<span>Rejuvenate Collection</span>
+<span>$3,000 - $6,000+</span>
+</div>
+<div class="pyramid-tier tier-premium">
+<span>Restore Collection</span>
+<span>$1,800 - $3,000</span>
+</div>
+<div class="pyramid-tier tier-mid">
+<span>Essential Collection</span>
+<span>$1,000 - $1,800</span>
+</div>
+<div class="pyramid-tier tier-budget">
+<span>Budget Segment (Avoided)</span>
+<span>Under $1,000</span>
+</div>
+</div>
+<div style="margin-top: 3rem; display: flex; justify-content: space-around; text-align: center;">
+<div>
+<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">DreamLayer™</div>
+<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Ultra-Premium Tech</div>
+</div>
+<div>
+<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">GelFlex® Grid</div>
+<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Core Technology</div>
+</div>
+<div>
+<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">42.8%</div>
+<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Q3 Gross Margin</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">17 / 41</div>
+</section>
+<!-- Slide 18: Value Proposition -->
+<section class="slide" data-slide="18">
+<div class="slide-header">
+<h2>💎 Value Proposition Architecture</h2>
+<p class="subtitle">Hover over cards to reveal the three reinforcing pillars</p>
+</div>
+<div class="slide-content">
+<div class="flip-container">
+<!-- Pillar 1 -->
+<div class="flip-card">
+<div class="flip-front">
+<div class="flip-icon">🔬</div>
+<div class="flip-title">Pillar 1</div>
+<div style="font-weight: 700; color: var(--text-secondary); font-size: 1.2rem;">Proprietary Technology</div>
+</div>
+<div class="flip-back">
+<div class="flip-title">GelFlex® Grid</div>
+<p class="flip-desc">Delivers pressure relief, adaptive spinal support, and temperature neutrality through Hyper-Elastic Polymer engineering.</p>
+<div class="flip-stat">10x better airflow than memory foam</div>
+<p style="font-size: 1rem; margin-top: 1rem; opacity: 0.8;">Addresses the "hot sleeper" pain point identified by 72% of premium buyers.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flip-card">
+<div class="flip-front">
+<div class="flip-icon">🩺</div>
+<div class="flip-title">Pillar 2</div>
+<div style="font-weight: 700; color: var(--text-secondary); font-size: 1.2rem;">Clinical Validation</div>
+</div>
+<div class="flip-back" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+<div class="flip-title">SleepScore Labs</div>
+<p class="flip-desc">Dec 2025 independent research across 3,300+ nights of data proved statistically significant health benefits.</p>
+<div class="flip-stat">68% Pain Reduction (Essentials)</div>
+<div class="flip-stat" style="margin-top: 0.75rem;">63% Pain Reduction (Restore)</div>
+<p style="font-size: 1rem; margin-top: 1rem; opacity: 0.8;">Positions Purple as a health solution, not a commodity.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flip-card">
+<div class="flip-front">
+<div class="flip-icon">🚀</div>
+<div class="flip-title">Pillar 3</div>
+<div style="font-weight: 700; color: var(--text-secondary); font-size: 1.2rem;">Continuous Innovation</div>
+</div>
+<div class="flip-back" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+<div class="flip-title">Innovation Pipeline</div>
+<p class="flip-desc">Continuous R&D reinvestment is required to maintain the 200+ patent defensible moat as older patents age.</p>
+<div class="flip-stat">Rejuvenate 2.0 DreamLayer</div>
+<p style="font-size: 1rem; margin-top: 1rem; opacity: 0.8;">Successfully launched at ~$5,800 ASP with 3,000+ units sold, proving ultra-premium viability.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">18 / 41</div>
+</section>
+<!-- Slide 19: Consumer Purchase Criteria -->
+<section class="slide" data-slide="19">
+<div class="slide-header">
+<h2>🎯 Consumer Purchase Criteria — Premium Segment</h2>
+<p class="subtitle">Purple's performance against key decision factors</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div>
+<table class="data-table">
+<thead>
+<tr><th>Criterion</th><th>Importance</th><th>Assessment</th></tr>
+</thead>
+<tbody>
+<tr class="success-row"><td><strong>Temperature Regulation</strong></td><td>72%</td><td><span class="badge badge-success">Key Differentiator</span></td></tr>
+<tr class="success-row"><td><strong>Pain/Pressure Relief</strong></td><td>68%</td><td><span class="badge badge-success">Validated</span></td></tr>
+<tr><td><strong>Comfort & Support</strong></td><td>95%</td><td><span class="badge badge-purple">Strong</span></td></tr>
+<tr><td><strong>Durability</strong></td><td>87%</td><td><span class="badge badge-purple">Strong</span></td></tr>
+<tr><td><strong>Brand Reputation</strong></td><td>58%</td><td><span class="badge badge-warning">Moderate</span></td></tr>
+<tr class="danger-row"><td><strong>Smart Features</strong></td><td>35%</td><td><span class="badge badge-danger">Gap Area</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon teal">📊</div><span class="card-title">Consumer Importance Ratings</span></div>
+<div class="chart-container medium"><canvas id="criteriaChart"></canvas></div>
+</div>
+</div>
+</div>
+<div class="slide-number">19 / 41</div>
+</section>
+<!-- Slide 20: Competitive Landscape Overview -->
+<section class="slide" data-slide="20">
+<div class="slide-header">
+<h2>🏆 Competitive Landscape Overview</h2>
+<p class="subtitle">Market structure and hierarchy</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div>
+<table class="data-table">
+<thead>
+<tr><th>Company</th><th>Share</th><th>Revenue</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Somnigroup</strong></td><td>27.5%</td><td>$4.9B</td></tr>
+<tr><td><strong>Serta Simmons</strong></td><td>17.5%</td><td>$2.4B+</td></tr>
+<tr><td><strong>Sleep Number</strong></td><td>9.0%</td><td>$1.68B</td></tr>
+<tr class="highlight"><td><strong>Purple Innovation</strong></td><td><strong>2.5%</strong></td><td><strong>$0.49B</strong></td></tr>
+<tr><td><strong>Others</strong></td><td>43.5%</td><td>Various</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon orange">📊</div><span class="card-title">Market Share Distribution</span></div>
+<div class="chart-container medium"><canvas id="marketShareChart"></canvas></div>
+</div>
+</div>
+</div>
+<div class="slide-number">20 / 41</div>
+</section>
+<!-- Slide 21: Market Share Pie -->
+<section class="slide" data-slide="21">
+<div class="slide-header">
+<h2>📊 U.S. Mattress Market Share</h2>
+<p class="subtitle">Visualizing competitive dominance vs. challenger positioning</p>
+</div>
+<div class="slide-content">
+<div class="card" style="height: 100%; border-top: 6px solid var(--blue);">
+<div class="chart-container large"><canvas id="marketSharePieChart"></canvas></div>
+<div style="margin-top: 1.5rem; text-align: center; color: var(--text-secondary); background: var(--bg-surface); padding: 1.5rem; border-radius: 10px; font-size: 1.1rem;">
+<strong style="color: var(--blue);">Key Takeaway:</strong> While the "Big 3" control over 50% of the market, a highly fragmented "Others" segment (43.5%) presents immediate acquisition/consolidation opportunities for differentiated brands like Purple.
+</div>
+</div>
+</div>
+<div class="slide-number">21 / 41</div>
+</section>
+<!-- Slide 22: Revenue Comparison -->
+<section class="slide" data-slide="22">
+<div class="slide-header">
+<h2>💰 The Scale Challenge: Revenue Comparison</h2>
+<p class="subtitle">Highlighting the 10x gap between the market leader and Purple</p>
+</div>
+<div class="slide-content">
+<div class="card" style="height: 100%; border-top: 6px solid var(--rose);">
+<div class="chart-container large"><canvas id="revenueBarChart"></canvas></div>
+<div style="margin-top: 1.5rem; text-align: center; color: var(--text-secondary); background: var(--bg-surface); padding: 1.5rem; border-radius: 10px; font-size: 1.1rem;">
+<strong style="color: var(--rose);">Strategic Reality:</strong> Purple's $488M revenue means it cannot win via ad spend brute-force. It must rely on hyper-targeted omnichannel execution and its patented product superiority.
+</div>
+</div>
+</div>
+<div class="slide-number">22 / 41</div>
+</section>
+<!-- Slide 23: Primary Competitor Analysis -->
+<section class="slide" data-slide="23">
+<div class="slide-header">
+<h2>🔍 Primary Competitor Analysis</h2>
+<p class="subtitle">Strategic positioning of key rivals</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 6px solid var(--rose);">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--bg-surface);">
+<div>
+<div style="font-weight: 800; color: var(--purple-primary); font-size: 1.4rem;">Somnigroup International</div>
+<div style="font-size: 1rem; color: var(--text-muted); font-weight: 600; margin-top: 0.5rem;">$4.9B Revenue | 27.5% Market Share</div>
+</div>
+<span class="badge badge-danger">Primary Threat</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--bg-surface);">
+<span style="color: var(--text-muted);">Strategy</span><span style="font-weight: 700; color: var(--text-primary);">Multi-brand + Mattress Firm</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--bg-surface);">
+<span style="color: var(--text-muted);">Distribution</span><span style="font-weight: 700; color: var(--text-primary);">2,300+ stores</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem;">
+<span style="color: var(--text-muted);">Technology</span><span style="font-weight: 700; color: var(--text-primary);">TEMPUR® material</span>
+</div>
+</div>
+<div class="card" style="border-top: 6px solid var(--amber);">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--bg-surface);">
+<div>
+<div style="font-weight: 800; color: var(--purple-primary); font-size: 1.4rem;">Sleep Number Corporation</div>
+<div style="font-size: 1rem; color: var(--text-muted); font-weight: 600; margin-top: 0.5rem;">$1.68B Revenue | 9.0% Market Share</div>
+</div>
+<span class="badge badge-warning">Tech Threat</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--bg-surface);">
+<span style="color: var(--text-muted);">Strategy</span><span style="font-weight: 700; color: var(--text-primary);">Tech platform (health device)</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--bg-surface);">
+<span style="color: var(--text-muted);">Distribution</span><span style="font-weight: 700; color: var(--text-primary);">650+ owned stores</span>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 0.8rem 0; font-size: 1.1rem;">
+<span style="color: var(--text-muted);">Technology</span><span style="font-weight: 700; color: var(--text-primary);">SleepIQ® (15M+ users)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">23 / 41</div>
+</section>
+<!-- Slide 24: Competitor Deep Dive - Somnigroup -->
+<section class="slide" data-slide="24">
+<div class="slide-header">
+<h2>🏢 Competitor Profile: Somnigroup International</h2>
+<p class="subtitle">Market leader with vertical integration through Mattress Firm</p>
+</div>
+<div class="slide-content">
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-value">$4.9B</div><div class="stat-label">FY2024 Revenue</div></div>
+<div class="stat-card"><div class="stat-value">25-30%</div><div class="stat-label">Market Share</div></div>
+<div class="stat-card"><div class="stat-value">2,300</div><div class="stat-label">Mattress Firm Stores</div></div>
+<div class="stat-card" style="border-left-color: var(--amber);"><div class="stat-value" style="background: linear-gradient(135deg, var(--amber) 0%, var(--orange) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">10x</div><div class="stat-label">Revenue vs. Purple</div></div>
+</div>
+<div class="grid-2">
+<div class="card">
+<div class="card-header"><div class="card-icon purple">📊</div><span class="card-title">Brand Portfolio</span></div>
+<table class="data-table">
+<tr><td><strong>Tempur-Pedic</strong></td><td>$2,000-$8,000</td><td>Ultra-premium</td></tr>
+<tr><td><strong>Sealy</strong></td><td>$800-$3,000</td><td>Mid-to-premium</td></tr>
+<tr><td><strong>Stearns & Foster</strong></td><td>$2,500-$6,000</td><td>Luxury</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon blue">⚔️</div><span class="card-title">Competitive Analysis</span></div>
+<ul class="feature-list">
+<li><strong>Strengths:</strong> Unmatched distribution scale, NASA heritage</li>
+<li><strong>Weaknesses:</strong> Memory foam heat retention, integration complexity</li>
+<li class="warning"><strong>Recent Move:</strong> ActiveBreeze Halo AI product launched 2024</li>
+<li><strong>Purple Advantage:</strong> GelFlex Grid superior temperature regulation</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">24 / 41</div>
+</section>
+<!-- Slide 25: Competitor Deep Dive - Sleep Number -->
+<section class="slide" data-slide="25">
+<div class="slide-header">
+<h2>🤖 Competitor Profile: Sleep Number Corporation</h2>
+<p class="subtitle">Smart sleep technology platform leader</p>
+</div>
+<div class="slide-content">
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-value">$1.68B</div><div class="stat-label">FY2024 Revenue</div></div>
+<div class="stat-card"><div class="stat-value">8-10%</div><div class="stat-label">Market Share</div></div>
+<div class="stat-card" style="border-left-color: var(--teal);"><div class="stat-value" style="background: linear-gradient(135deg, var(--teal) 0%, var(--cyan) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">15M+</div><div class="stat-label">SleepIQ Users</div></div>
+<div class="stat-card"><div class="stat-value">650</div><div class="stat-label">Owned Retail Stores</div></div>
+</div>
+<div class="grid-2">
+<div class="card" style="border-left: 6px solid var(--teal);">
+<div class="card-header"><div class="card-icon teal">🧠</div><span class="card-title">360 Smart Bed Platform</span></div>
+<ul class="feature-list">
+<li>AI-driven adaptive firmness adjustment</li>
+<li>Biometric sleep tracking (heart rate, breathing)</li>
+<li>Health coaching integrations</li>
+<li>Data-driven personalization creates switching costs</li>
+</ul>
+</div>
+<div class="card" style="border-left: 6px solid var(--rose);">
+<div class="card-header"><div class="card-icon red">⚡</div><span class="card-title">Strategic Threat to Purple</span></div>
+<div style="background: linear-gradient(135deg, var(--rose-light) 0%, #fecaca 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="color: #991b1b; font-size: 1.1rem;">Critical Gap:</strong> <span style="color: var(--text-secondary); font-size: 1.1rem;">Purple lacks smart/AI features that are becoming table-stakes for health-conscious consumers.</span>
+</div>
+<ul class="feature-list">
+<li class="danger">15M+ SleepIQ users = massive data advantage</li>
+<li class="warning">Purple's response required by 2027-2028</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">25 / 41</div>
+</section>
+<!-- Slide 26: Value Curve Radar -->
+<section class="slide" data-slide="26">
+<div class="slide-header">
+<h2>🕸️ Value Curve Radar</h2>
+<p class="subtitle">Multidimensional competitive positioning across key attributes</p>
+</div>
+<div class="slide-content">
+<div class="chart-container" style="height: 450px;"><canvas id="valueCurveChart"></canvas></div>
+<div style="margin-top: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+<span style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 600;"><span style="width: 20px; height: 20px; background: var(--purple-primary); border-radius: 4px;"></span> Purple</span>
+<span style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 600;"><span style="width: 20px; height: 20px; background: #6b7280; border-radius: 4px;"></span> Somnigroup</span>
+<span style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 600;"><span style="width: 20px; height: 20px; background: var(--blue); border-radius: 4px;"></span> Sleep Number</span>
+<span style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 600;"><span style="width: 20px; height: 20px; background: var(--emerald); border-radius: 4px;"></span> Saatva</span>
+</div>
+</div>
+<div class="slide-number">26 / 41</div>
+</section>
+<!-- Slide 27: Strategic Value Line -->
+<section class="slide" data-slide="27">
+<div class="slide-header">
+<h2>📉 Strategic Value Line</h2>
+<p class="subtitle">Highlighting distinct differentiation patterns vs top rivals</p>
+</div>
+<div class="slide-content">
+<div class="card" style="height: 100%; border-top: 6px solid var(--purple-primary);">
+<div class="chart-container large"><canvas id="valueCurveLineChart"></canvas></div>
+<div style="margin-top: 1.5rem; text-align: center; color: var(--text-secondary); background: var(--bg-surface); padding: 1.5rem; border-radius: 10px; font-size: 1.1rem;">
+<strong style="color: var(--purple-primary);">Strategic Differentiation:</strong> Purple heavily out-indexes competitors on physical product properties (Temperature/Pressure), while drastically lagging in Software/AI and Brand Distribution scale.
+</div>
+</div>
+</div>
+<div class="slide-number">27 / 41</div>
+</section>
+<!-- Slide 28: Competitive Position Assessment -->
+<section class="slide" data-slide="28">
+<div class="slide-header">
+<h2>🎯 Purple's Competitive Position Assessment</h2>
+<p class="subtitle">Differentiation strengths vs. structural vulnerabilities</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-left: 6px solid var(--emerald);">
+<div class="card-header"><div class="card-icon green">💪</div><span class="card-title">Differentiation Strengths</span></div>
+<ul class="feature-list">
+<li>Superior temperature regulation (10x airflow vs. memory foam)</li>
+<li>200+ patent GelFlex® Grid technology moat</li>
+<li>Clinical validation: 68% pain reduction (SleepScore Labs)</li>
+<li>Q3 2025: First positive EBITDA, 42.8% gross margin (+700 bps)</li>
+<li>Vertically integrated Utah manufacturing</li>
+</ul>
+</div>
+<div class="card" style="border-left: 6px solid var(--rose);">
+<div class="card-header"><div class="card-icon red">⚠️</div><span class="card-title">Structural Vulnerabilities</span></div>
+<ul class="feature-list">
+<li class="danger"><strong>Smart Technology Gap:</strong> Sleep Number 360® serves 15M+ users</li>
+<li class="danger"><strong>Distribution Scale Deficit:</strong> 58 showrooms vs. Sleep Number's 650+</li>
+<li class="warning"><strong>Brand Heritage Deficit:</strong> Competing against 30+ year brands</li>
+<li class="warning">Patent aging creates time-bounded protection</li>
+<li class="danger">Somnigroup's Mattress Firm ownership = asymmetric leverage</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">28 / 41</div>
+</section>
+<!-- Slide 29: Distribution Channel Strategy -->
+<section class="slide" data-slide="29">
+<div class="slide-header">
+<h2>🛒 Distribution Channel Evolution</h2>
+<p class="subtitle">Online-to-Offline strategic transition</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card">
+<div class="card-header"><div class="card-icon purple">📊</div><span class="card-title">Channel Mix — FY2024</span></div>
+<div class="chart-container medium"><canvas id="channelMixChart"></canvas></div>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon orange">🎯</div><span class="card-title">Consumer Behavior Reality</span></div>
+<div style="background: linear-gradient(135deg, var(--amber-light) 0%, #fde68a 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="color: #92400e; font-size: 1.1rem;">The 70/30 Gap:</strong>
+<p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.05rem;">65-70% of mattress shoppers research online, but only 30-35% complete purchases digitally. Gap widens at premium price points >$1,500.</p>
+</div>
+<ul class="feature-list">
+<li><strong>Physical retail remains conversion-critical</strong> for high-consideration purchases</li>
+</ul>
+</div>
+</div>
+<div class="grid-3" style="margin-top: 2rem;">
+<div class="imperative">
+<div class="imperative-number">1</div>
+<h4>Mattress Firm Expansion</h4>
+<p><strong>9,200 → 12,000 slots</strong> by mid-2026. <strong>$70M</strong> projected incremental annual revenue.</p>
+</div>
+<div class="imperative">
+<div class="imperative-number">2</div>
+<h4>Showroom Network Growth</h4>
+<p><strong>58 → 75-100 locations</strong> targeted by 2027-2028 in high-traffic urban markets.</p>
+</div>
+<div class="imperative">
+<div class="imperative-number">3</div>
+<h4>Wholesale Partners</h4>
+<p><strong>3,000+ retail partners</strong> + Costco furniture events (450 clubs Q4 2025, 2x prior year).</p>
+</div>
+</div>
+</div>
+<div class="slide-number">29 / 41</div>
+</section>
+<!-- Slide 30: Customer Journey Flowchart -->
+<section class="slide" data-slide="30">
+<div class="slide-header">
+<h2>🔄 Premium Mattress Customer Journey</h2>
+<p class="subtitle">The Omnichannel Experience: Bridging the 70/30 Gap</p>
+</div>
+<div class="slide-content">
+<div class="card" style="padding: 3rem; flex-grow: 1;">
+<h3 style="text-align: center; color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.6rem;">3-6 Weeks Typical Purchase Path for Premium Buyers</h3>
+<p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 600;">Online Research & Information Gathering ➔ Tactile Validation Critical</p>
+<div class="journey-container">
+<!-- Stage 1 -->
+<div class="journey-stage">
+<div class="stage-circle">1</div>
+<div class="stage-title">Awareness</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">Social Media Ads</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">YouTube Reviews</div>
+<div class="stage-box physical">Word-of-Mouth</div>
+</div>
+<!-- Stage 2 -->
+<div class="journey-stage">
+<div class="stage-circle">2</div>
+<div class="stage-title">Consideration</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">Purple.com Visit</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">Comparison Sites</div>
+<div class="stage-box digital">Virtual Selector Tool</div>
+</div>
+<!-- Stage 3 -->
+<div class="journey-stage">
+<div class="stage-circle" style="background: var(--purple-light); border-color: var(--purple-primary);">3</div>
+<div class="stage-title">Evaluation</div>
+<div class="stage-box physical" style="margin-bottom: 0.75rem; background: var(--emerald-light); border-color: var(--emerald); font-weight: 800;">Mattress Firm Test</div>
+<div class="stage-box physical" style="margin-bottom: 0.75rem;">Purple Showroom</div>
+<div class="stage-box physical">Costco Event</div>
+</div>
+<!-- Stage 4 -->
+<div class="journey-stage">
+<div class="stage-circle">4</div>
+<div class="stage-title">Purchase</div>
+<div class="stage-box physical" style="margin-bottom: 0.75rem;">In-Store (65-70%)</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">Online Direct (30-35%)</div>
+<div class="stage-box digital">Phone Order</div>
+</div>
+<!-- Stage 5 -->
+<div class="journey-stage">
+<div class="stage-circle">5</div>
+<div class="stage-title">Post-Purchase</div>
+<div class="stage-box physical" style="margin-bottom: 0.75rem;">White Glove Setup</div>
+<div class="stage-box digital" style="margin-bottom: 0.75rem;">100-Night Trial</div>
+<div class="stage-box digital">Loyalty/Referral</div>
+</div>
+</div>
+<div style="margin-top: 4rem; display: flex; justify-content: center; gap: 3rem;">
+<span style="display: flex; align-items: center; gap: 0.75rem; font-size: 1.1rem; font-weight: 700;"><span style="width: 20px; height: 20px; background: var(--blue); border-radius: 4px;"></span> Digital Touchpoint</span>
+<span style="display: flex; align-items: center; gap: 0.75rem; font-size: 1.1rem; font-weight: 700;"><span style="width: 20px; height: 20px; background: var(--emerald); border-radius: 4px;"></span> Physical Touchpoint</span>
+</div>
+</div>
+</div>
+<div class="slide-number">30 / 41</div>
+</section>
+<!-- Slide 31: Key Success Factors Priority Matrix -->
+<section class="slide" data-slide="31">
+<div class="slide-header">
+<h2>🔑 Key Success Factors Priority Matrix (2026-2029)</h2>
+<p class="subtitle">Strategic priorities derived from Five Forces and PESTEL analysis</p>
+</div>
+<div class="slide-content">
+<table class="data-table">
+<thead>
+<tr><th style="width: 60px;">Rank</th><th>Key Success Factor</th><th>Priority</th><th>Timeline</th><th>Primary Driver</th></tr>
+</thead>
+<tbody>
+<tr class="warning-row"><td><strong>1</strong></td><td><strong>Omnichannel Distribution Excellence</strong></td><td><span class="badge badge-danger">HIGHEST</span></td><td>2026-2027</td><td>Buyer Power + Rivalry</td></tr>
+<tr><td><strong>2</strong></td><td><strong>IP Defense + Smart Tech Entry</strong></td><td><span class="badge badge-warning">HIGH</span></td><td>2026-2029</td><td>Substitutes + Technology</td></tr>
+<tr><td><strong>3</strong></td><td><strong>Premium Pricing/Margin Expansion</strong></td><td><span class="badge badge-warning">HIGH</span></td><td>2026-2028</td><td>Rivalry + Profitability</td></tr>
+<tr><td><strong>4</strong></td><td><strong>Clinical/Scientific Positioning</strong></td><td><span class="badge badge-purple">MOD-HIGH</span></td><td>2026-2028</td><td>Social + Health Trends</td></tr>
+<tr><td><strong>5</strong></td><td><strong>Supply Chain Resilience</strong></td><td><span class="badge badge-purple">MODERATE</span></td><td>Ongoing</td><td>Political + Suppliers</td></tr>
+</tbody>
+</table>
+</div>
+<div class="slide-number">31 / 41</div>
+</section>
+<!-- Slide 32: Key Success Factors: Strategic Rationale -->
+<section class="slide" data-slide="32">
+<div class="slide-header">
+<h2>🔑 Key Success Factors: Strategic Rationale</h2>
+<p class="subtitle">Deep dive into top two priorities</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card">
+<div class="card-header"><div class="card-icon purple">1</div><span class="card-title">KSF #1: Omnichannel Excellence</span></div>
+<ul class="feature-list">
+<li><strong>65-70%</strong> research online; only <strong>30-35%</strong> buy online</li>
+<li>Premium buyers require physical trial before purchase</li>
+<li>12,000 Mattress Firm slots by mid-2026 (up from 9,200)</li>
+<li>58 showrooms vs. Sleep Number's 650+ = scale deficit</li>
+</ul>
+</div>
+<div class="card">
+<div class="card-header"><div class="card-icon purple">2</div><span class="card-title">KSF #2: IP + Smart Technology</span></div>
+<ul class="feature-list">
+<li>200+ patents = primary competitive moat</li>
+<li>Sleep Number SleepIQ® serves <strong>15M+ users</strong> with health data</li>
+<li>Somnigroup's ActiveBreeze Halo entering with AI temperature optimization</li>
+<li>Must establish smart position by 2027-2028</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="slide-number">32 / 41</div>
+</section>
+<!-- NEW SLIDE 33: Competitive Success Formula -->
+<section class="slide" data-slide="33">
+<div class="slide-header">
+<h2>🏆 The Competitive Success Formula</h2>
+<p class="subtitle">Three mutually-reinforcing elements required for 2026-2029 success</p>
+</div>
+<div class="slide-content">
+<div class="formula-container">
+<div class="formula-pillar tech">
+<div class="formula-icon">🔬</div>
+<div class="formula-title">Proprietary Technology</div>
+<p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.75rem;">GelFlex® Grid + clinical validation justifying premium pricing</p>
+</div>
+<div class="formula-plus">+</div>
+<div class="formula-pillar omni">
+<div class="formula-icon">🛒</div>
+<div class="formula-title">Omnichannel Distribution</div>
+<p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.75rem;">12,000 MF slots + 58+ showrooms + robust DTC access</p>
+</div>
+<div class="formula-plus">+</div>
+<div class="formula-pillar ops">
+<div class="formula-icon">⚙️</div>
+<div class="formula-title">Operational Excellence</div>
+<p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.75rem;">42.8% GM + positive EBITDA enabling sustainable reinvestment</p>
+</div>
+</div>
+<div style="margin-top: 3.5rem; text-align: center; padding: 2rem; background: var(--purple-gradient); border-radius: 16px; color: white; box-shadow: var(--shadow-lg);">
+<h3 style="font-size: 2rem; font-weight: 900; letter-spacing: -0.5px;">= Sustainable Competitive Advantage</h3>
+<p style="font-size: 1.2rem; opacity: 0.9; margin-top: 0.75rem;">Executing this formula prevents platform-based competitive displacement.</p>
+</div>
+</div>
+<div class="slide-number">33 / 41</div>
+</section>
+<!-- Slide 34: Sustainable Competitive Advantages -->
+<section class="slide" data-slide="34">
+<div class="slide-header">
+<h2>🛡️ Purple's Sustainable Competitive Advantages</h2>
+<p class="subtitle">Defensible moats against industry commoditization</p>
+</div>
+<div class="slide-content">
+<div class="grid-4">
+<!-- Advantage 1 -->
+<div class="card" style="padding: 1.5rem; text-align: center; border-top: 6px solid var(--purple-primary);">
+<div class="card-icon purple" style="margin: 0 auto 1.5rem;">🔬</div>
+<h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Proprietary Tech Moat</h4>
+<ul style="list-style: none; padding: 0; font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left; line-height: 1.6;">
+<li style="margin-bottom: 0.5rem;">• 200+ GelFlex Grid Patents</li>
+<li style="margin-bottom: 0.5rem;">• Hyper-Elastic Polymer Expertise</li>
+<li>• Difficult to Replicate</li>
+</ul>
+<div style="background: var(--bg-surface); padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; font-weight: 800; margin-top: auto;">
+STRENGTH: <span style="color: var(--purple-primary);">VERY STRONG</span>
+</div>
+</div>
+<!-- Advantage 2 -->
+<div class="card" style="padding: 1.5rem; text-align: center; border-top: 6px solid var(--emerald);">
+<div class="card-icon green" style="margin: 0 auto 1.5rem;">🩺</div>
+<h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Clinical Validation</h4>
+<ul style="list-style: none; padding: 0; font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left; line-height: 1.6;">
+<li style="margin-bottom: 0.5rem;">• 68% Pain Reduction</li>
+<li style="margin-bottom: 0.5rem;">• SleepScore Labs Verified</li>
+<li>• Evidence-Based Marketing</li>
+</ul>
+<div style="background: var(--bg-surface); padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; font-weight: 800; margin-top: auto;">
+STRENGTH: <span style="color: var(--emerald);">STRONG</span>
+</div>
+</div>
+<!-- Advantage 3 -->
+<div class="card" style="padding: 1.5rem; text-align: center; border-top: 6px solid var(--blue);">
+<div class="card-icon blue" style="margin: 0 auto 1.5rem;">🏭</div>
+<h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Vertical Integration</h4>
+<ul style="list-style: none; padding: 0; font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left; line-height: 1.6;">
+<li style="margin-bottom: 0.5rem;">• Domestic Manufacturing</li>
+<li style="margin-bottom: 0.5rem;">• Speed to Market</li>
+<li>• Quality Assurance</li>
+</ul>
+<div style="background: var(--bg-surface); padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; font-weight: 800; margin-top: auto;">
+STRENGTH: <span style="color: var(--blue);">STRONG</span>
+</div>
+</div>
+<!-- Advantage 4 -->
+<div class="card" style="padding: 1.5rem; text-align: center; border-top: 6px solid var(--amber);">
+<div class="card-icon orange" style="margin: 0 auto 1.5rem;">🛒</div>
+<h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Omnichannel Scale</h4>
+<ul style="list-style: none; padding: 0; font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: left; line-height: 1.6;">
+<li style="margin-bottom: 0.5rem;">• 15,000+ Touchpoints</li>
+<li style="margin-bottom: 0.5rem;">• Mattress Firm: 12,000 Slots</li>
+<li>• Costco: 450+ Clubs</li>
+</ul>
+<div style="background: var(--bg-surface); padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; font-weight: 800; margin-top: auto;">
+STRENGTH: <span style="color: var(--amber);">MOD-STRONG</span>
+</div>
+</div>
+</div>
+<div style="margin-top: 1.5rem; text-align: center; color: var(--text-secondary); font-size: 1.1rem; font-weight: 600;">
+<em>Advantages 1-3 provide defensible long-term moats. Advantage 4 requires continuous capital investment to maintain.</em>
+</div>
+</div>
+<div class="slide-number">34 / 41</div>
+</section>
+<!-- NEW SLIDE 35: EBITDA Trajectory Chart -->
+<section class="slide" data-slide="35">
+<div class="slide-header">
+<h2>📈 Profitability Trajectory (2024-2028)</h2>
+<p class="subtitle">Path to 5%+ Adjusted EBITDA Margin</p>
+</div>
+<div class="slide-content">
+<div class="card" style="height: 100%; border-top: 6px solid var(--emerald);">
+<div class="chart-container large"><canvas id="ebitdaChart"></canvas></div>
+<div style="margin-top: 1.5rem; text-align: center; color: var(--text-secondary); background: var(--bg-surface); padding: 1.5rem; border-radius: 10px; font-size: 1.1rem;">
+<strong style="color: var(--emerald);">Financial Milestone:</strong> Achieving full-year Adjusted EBITDA profitability in fiscal 2026 is the critical stepping stone to reaching the 5%+ margin target by 2028, demonstrating a sustainable profitability model.
+</div>
+</div>
+</div>
+<div class="slide-number">35 / 41</div>
+</section>
+<!-- Slide 36: Strategic Roadmap 2026-2029 -->
+<section class="slide" data-slide="36">
+<div class="slide-header">
+<h2>🗺️ Strategic Roadmap 2026-2029</h2>
+<p class="subtitle">Key success factors with implementation timeline</p>
+</div>
+<div class="slide-content">
+<table class="data-table">
+<thead>
+<tr><th style="width: 60px;">Priority</th><th>Key Success Factor</th><th>2026 Milestones</th><th>2027-2028 Objectives</th><th>2029 Target</th></tr>
+</thead>
+<tbody>
+<tr class="highlight"><td><strong>1</strong></td><td><strong>Omnichannel Distribution Excellence</strong></td><td>12,000 MF slots; maintain 42%+ gross margin</td><td>75-100 showrooms; wholesale growth >10%</td><td>Profitable omnichannel model proven</td></tr>
+<tr class="warning-row"><td><strong>2</strong></td><td><strong>IP Defense & Smart Tech Entry</strong></td><td>DreamLayer evolution; clinical validation integration</td><td>Smart sleep pilot/partnership; next-gen materials</td><td>250 patents; AI-enabled product line</td></tr>
+<tr class="success-row"><td><strong>3</strong></td><td><strong>Premium Pricing & Margin Expansion</strong></td><td>Full-year Adj. EBITDA positive; 42.8% GM sustained</td><td>5% Adj. EBITDA margin; 3-5% ASP growth</td><td>Sustainable profitability model</td></tr>
+<tr><td><strong>4</strong></td><td><strong>Clinical/Scientific Positioning</strong></td><td>100% marketing integration; healthcare pilot</td><td>40% target awareness; insurance exploration</td><td>Health solution category leader</td></tr>
+<tr><td><strong>5</strong></td><td><strong>Supply Chain Resilience</strong></td><td>90% domestic production; 6-9mo dev cycles</td><td>Zero critical stockouts; cost variance &lt;3%</td><td>Operational excellence competitive moat</td></tr>
+</tbody>
+</table>
+</div>
+<div class="slide-number">36 / 41</div>
+</section>
+<!-- Slide 37: Critical Risks & Mitigation -->
+<section class="slide" data-slide="37">
+<div class="slide-header">
+<h2>⚠️ Critical Risks & Mitigation Strategies</h2>
+<p class="subtitle">Strategic challenges requiring immediate attention</p>
+</div>
+<div class="slide-content">
+<div class="grid-2">
+<div class="card" style="border-top: 6px solid var(--rose);">
+<div class="card-header"><div class="card-icon red">🔴</div><span class="card-title">High-Priority Risks</span></div>
+<div class="imperative">
+<div class="imperative-number">1</div>
+<h4>Smart Technology Disruption</h4>
+<p><strong>Risk:</strong> Sleep Number's 15M SleepIQ users + Somnigroup AI integration capture Purple's health-conscious demographic.<br><strong>Mitigation:</strong> Smart sleep pilot by 2027; strategic partnership exploration; leverage clinical validation interim.</p>
+</div>
+<div class="imperative">
+<div class="imperative-number">2</div>
+<h4>Scale Disadvantage vs. Somnigroup</h4>
+<p><strong>Risk:</strong> 10x revenue gap enables sustained marketing/R&D investment Purple cannot match.<br><strong>Mitigation:</strong> Focus on differentiation (GelFlex Grid), surgical marketing spend, operational efficiency gains.</p>
+</div>
+</div>
+<div class="card" style="border-top: 6px solid var(--amber);">
+<div class="card-header"><div class="card-icon orange">🟡</div><span class="card-title">Moderate-Priority Risks</span></div>
+<div class="imperative">
+<div class="imperative-number">3</div>
+<h4>Housing Market Prolonged Weakness</h4>
+<p><strong>Risk:</strong> 30-35% of purchases tied to home moves; elevated rates suppress turnover.<br><strong>Mitigation:</strong> Premiumization strategy (ASP growth offsets volume), replacement cycle marketing, clinical health positioning.</p>
+</div>
+<div class="imperative">
+<div class="imperative-number">4</div>
+<h4>Patent Portfolio Aging</h4>
+<p><strong>Risk:</strong> Time-bounded protection enables future competitive imitation.<br><strong>Mitigation:</strong> Continuous R&D investment (3-4% revenue), DreamLayer evolution, target 250 patents by 2028.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">37 / 41</div>
+</section>
+<!-- Slide 38: Conclusion: Purple's Path Forward -->
+<section class="slide" data-slide="38">
+<div class="slide-header">
+<h2>🎯 Conclusion: Purple's Path Forward</h2>
+<p class="subtitle">Strategic synthesis and key takeaways</p>
+</div>
+<div class="slide-content">
+<div style="margin-bottom: 2rem;">
+<ul class="feature-list" style="font-size: 1.2rem;">
+<li>Purple occupies a <strong>genuinely differentiated</strong> but financially pressured competitive position</li>
+<li>GelFlex® Grid represents a <strong>real, defensible technological moat</strong> validated by clinical evidence</li>
+<li>2-3% market share underscores <strong>omnichannel execution urgency</strong></li>
+<li class="warning">Smart technology gap poses <strong>medium-term strategic risk</strong> as Sleep Number ecosystem matures</li>
+</ul>
+</div>
+<div style="padding: 2.5rem; background: linear-gradient(135deg, var(--purple-light) 0%, #ddd6fe 100%); border-radius: 18px; border-left: 8px solid var(--purple-primary);">
+<h4 style="color: var(--purple-dark); margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 800;">The Fundamental Challenge</h4>
+<p style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.6; font-weight: 600;">Execute <strong>three parallel strategic vectors</strong> simultaneously while achieving profitability:</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+<div style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: var(--shadow-sm);">
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">🏪</div>
+<strong style="color: var(--purple-dark); font-size: 1.1rem;">Scale Distribution</strong>
+</div>
+<div style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: var(--shadow-sm);">
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">🔬</div>
+<strong style="color: var(--purple-dark); font-size: 1.1rem;">Renew Innovation</strong>
+</div>
+<div style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: var(--shadow-sm);">
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+<strong style="color: var(--purple-dark); font-size: 1.1rem;">Enter Smart Sleep</strong>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-number">38 / 41</div>
+</section>
+<!-- Slide 39: References 1 -->
+<section class="slide" data-slide="39">
+<div class="slide-header">
+<h2>📚 References (1/2)</h2>
+<p class="subtitle">APA 7th Edition Format</p>
+</div>
+<div class="slide-content">
+<div class="apa-references" style="column-count: 2; column-gap: 3rem;">
+<div class="reference">
+Federal Trade Commission. (2024, July 2). <em>FTC sues to block Tempur Sealy's acquisition of Mattress Firm</em> [Press release]. https://www.ftc.gov/
+</div>
+<div class="reference">
+Furniture Today. (2025, May 6). Purple expands Mattress Firm deal, eyes $70M in new sales in 2,300 stores. <em>Furniture Today</em>. https://www.furnituretoday.com/
+</div>
+<div class="reference">
+IBISWorld. (2026). <em>Mattress manufacturing in the US</em> (NAICS 337910). IBISWorld Industry Report.
+</div>
+<div class="reference">
+International Sleep Products Association. (2026). <em>ISPA industry forecast 2026</em>. Bedtimes Magazine.
+</div>
+<div class="reference">
+Mintel. (2024). <em>US pillows and mattresses market report 2024</em>. Mintel Group Ltd.
+</div>
+<div class="reference">
+Mordor Intelligence. (2026). <em>United States mattress market size, analysis & share report 2031</em>. Mordor Intelligence.
+</div>
+</div>
+</div>
+<div class="slide-number">39 / 41</div>
+</section>
+<!-- Slide 40: References 2 -->
+<section class="slide" data-slide="40">
+<div class="slide-header">
+<h2>📚 References (2/2)</h2>
+<p class="subtitle">APA 7th Edition Format</p>
+</div>
+<div class="slide-content">
+<div class="apa-references" style="column-count: 2; column-gap: 3rem;">
+<div class="reference">
+Purple Innovation, Inc. (2025a, December 15). <em>Independent studies show Purple Innovation's Essential and Restore mattresses with GelFlex Grid technology help relieve pain and improve sleep quality</em> [Press release]. https://investors.purple.com/
+</div>
+<div class="reference">
+Purple Innovation, Inc. (2025b, March 12). <em>Purple Innovation reports fourth quarter and full year 2024 results</em> [Press release]. https://investors.purple.com/
+</div>
+<div class="reference">
+Purple Innovation, Inc. (2025c, May 5). <em>Purple announces significant expansion of commercial relationship with Somnigroup International</em> [Press release]. https://investors.purple.com/
+</div>
+<div class="reference">
+Purple Innovation, Inc. (n.d.). <em>GelFlex Grid technology</em>. https://purple.com/purple-grid
+</div>
+<div class="reference">
+Sleep Number Corporation. (2024). <em>2024 annual report</em>. Sleep Number Corporation.
+</div>
+<div class="reference">
+Somnigroup International. (2024). <em>2024 annual report</em> (Form 10-K). U.S. Securities and Exchange Commission.
+</div>
+</div>
+</div>
+<div class="slide-number">40 / 41</div>
+</section>
+<!-- Slide 41: Conclusion -->
+<section class="slide" data-slide="41">
+<div class="thank-you-slide">
+<h2>Thank You</h2>
+<h3>Questions & Discussion</h3>
+<p>Data Current Through Q3 2025 | Analysis Date: March 2026</p>
+<div style="margin-top: 3rem; display: flex; gap: 1.5rem; position: relative; z-index: 1;">
+<div style="background: rgba(255,255,255,0.18); padding: 1rem 2rem; border-radius: 50px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); font-weight: 700; font-size: 1.2rem;">
+📊 41 Slides
+</div>
+<div style="background: rgba(255,255,255,0.18); padding: 1rem 2rem; border-radius: 50px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); font-weight: 700; font-size: 1.2rem;">
+🔬 6 Analysis Sections
+</div>
+<div style="background: rgba(255,255,255,0.18); padding: 1rem 2rem; border-radius: 50px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); font-weight: 700; font-size: 1.2rem;">
+🎯 3 Strategic Imperatives
+</div>
+</div>
+</div>
+<div class="slide-number" style="color: rgba(255,255,255,0.7);">41 / 41</div>
+</section>
+
+</div> <!-- End slides-wrapper -->
+</div> <!-- End presentation-area -->
+
+<div class="keyboard-hint">
+Use <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd> to navigate
+</div>
+
+<script>
+// ==================== DYNAMIC CONTENT SCALING (THE FIX) ====================
+function applyDynamicScaling() {
+    const slides = document.querySelectorAll('.slide');
+    
+    slides.forEach(slide => {
+        // Temporarily show slide to measure accurately without layout shifts
+        const isHidden = window.getComputedStyle(slide).display === 'none';
+        if (isHidden) {
+            slide.style.display = 'block';
+            slide.style.visibility = 'hidden';
+            slide.style.position = 'absolute';
+        }
+
+        const content = slide.querySelector('.slide-content');
+        const header = slide.querySelector('.slide-header');
+        
+        if (content && header) {
+            // Reset any previous scaling
+            content.style.transform = 'none';
+            content.style.width = '100%';
+            content.style.marginLeft = '0';
+            
+            // Calculate available height vs actual content height
+            const slideHeight = 768;
+            const headerHeight = header.offsetHeight;
+            // Available height for content (subtracting header and a 30px bottom buffer)
+            const availableHeight = slideHeight - headerHeight - 30; 
+            const actualHeight = content.scrollHeight;
+
+            // If content is taller than available space, scale it down
+            if (actualHeight > availableHeight) {
+                const scale = availableHeight / actualHeight;
+                
+                content.style.transformOrigin = 'top center';
+                content.style.transform = `scale(${scale})`;
+                
+                // Compensate width so it still takes full horizontal space after scaling
+                content.style.width = `${100 / scale}%`;
+                content.style.marginLeft = `${(100 - (100 / scale)) / 2}%`;
+            }
+        }
+
+        // Restore original visibility state
+        if (isHidden) {
+            slide.style.display = '';
+            slide.style.visibility = '';
+            slide.style.position = '';
+        }
+    });
+}
+
+// ==================== WINDOW AUTO-FIT SCALING ====================
+function scaleSlides() {
+    const wrapper = document.getElementById('slidesWrapper');
+    const slideWidth = 1366;
+    const slideHeight = 768;
+    
+    // Calculate available space in the viewport
+    const availableWidth = window.innerWidth - 40;
+    const availableHeight = window.innerHeight - 110;
+    
+    // Calculate scale ratios
+    const scaleX = availableWidth / slideWidth;
+    const scaleY = availableHeight / slideHeight;
+    
+    // Use the smaller scale to ensure it fits both horizontally and vertically
+    const scale = Math.min(scaleX, scaleY);
+    
+    // Apply transform
+    wrapper.style.transform = `scale(${scale})`;
+}
+
+// Listen for window resize to adjust window scale dynamically
+window.addEventListener('resize', scaleSlides);
+
+// ==================== SLIDE NAVIGATION ====================
+let currentSlide = 1;
+const totalSlides = 41;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    if (n > totalSlides) currentSlide = 1;
+    if (n < 1) currentSlide = totalSlides;
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[currentSlide - 1].classList.add('active');
+    
+    document.getElementById('currentSlide').textContent = currentSlide;
+    const progress = (currentSlide / totalSlides) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+    
+    initChartsForSlide(currentSlide);
+}
+
+function nextSlide() { currentSlide++; showSlide(currentSlide); }
+function prevSlide() { currentSlide--; showSlide(currentSlide); }
+
+// Interactive Tabs Function
+function openTab(evt, tabName) {
+    evt.stopPropagation();
+    var tabcontent = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+    }
+    var tablinks = document.getElementsByClassName("tab-btn");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+    
+    // Re-apply dynamic scaling in case the new tab content is taller
+    setTimeout(applyDynamicScaling, 50);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault(); nextSlide();
+    } else if (e.key === 'ArrowLeft') {
+        e.preventDefault(); prevSlide();
+    } else if (e.key === 'Home') {
+        e.preventDefault(); currentSlide = 1; showSlide(currentSlide);
+    } else if (e.key === 'End') {
+        e.preventDefault(); currentSlide = totalSlides; showSlide(currentSlide);
+    }
+});
+
+// Touch/swipe support
+let touchStartX = 0;
+let touchEndX = 0;
+document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) nextSlide();
+    if (touchEndX > touchStartX + swipeThreshold) prevSlide();
+});
+
+// ==================== CHARTS ====================
+let chartInstances = {};
+function initChartsForSlide(slideNum) {
+    Object.keys(chartInstances).forEach(key => {
+        if (chartInstances[key]) {
+            chartInstances[key].destroy();
+            delete chartInstances[key];
+        }
+    });
+    if (slideNum === 3) initMarketGrowthChart();
+    else if (slideNum === 4) initMarginChart();
+    else if (slideNum === 5) initMarginTrendChart();
+    else if (slideNum === 16) initSegmentChart();
+    else if (slideNum === 19) initCriteriaChart();
+    else if (slideNum === 20) initMarketShareChart();
+    else if (slideNum === 21) initMarketSharePieChart();
+    else if (slideNum === 22) initRevenueBarChart();
+    else if (slideNum === 26) initValueCurveChart();
+    else if (slideNum === 27) initValueCurveLineChart();
+    else if (slideNum === 29) initChannelMixChart();
+    else if (slideNum === 35) initEbitdaChart();
+}
+
+function initChannelMixChart() {
+const ctx = document.getElementById('channelMixChart');
+if (!ctx) return;
+chartInstances.channelMix = new Chart(ctx, {
+type: 'doughnut',
+data: {
+labels: ['Direct-to-Consumer', 'Wholesale', 'International & Other'],
+datasets: [{
+data: [58.1, 41.9, 0],
+backgroundColor: ['rgba(102, 16, 242, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(16, 185, 129, 0.8)'],
+borderWidth: 2, borderColor: '#ffffff'
+}]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { padding: 15, font: { size: 14, weight: 'bold' } } } } }
+});
+}
+function initMarketGrowthChart() {
+const ctx = document.getElementById('marketGrowthChart');
+if (!ctx) return;
+chartInstances.marketGrowth = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031'],
+datasets: [{
+label: 'U.S. Retail Market ($B)', data: [17.5, 18.1, 18.77, 19.5, 20.3, 21.1, 21.8, 22.41],
+borderColor: '#6610f2', backgroundColor: 'rgba(102, 16, 242, 0.1)', fill: true, tension: 0.4,
+pointBackgroundColor: '#6610f2', pointBorderColor: '#fff', pointBorderWidth: 2, pointRadius: 5
+}]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false, min: 16, max: 24, grid: { color: 'rgba(0,0,0,0.05)' } }, x: { grid: { display: false } } }, animation: { duration: 1500, easing: 'easeOutQuart' } }
+});
+}
+function initMarginChart() {
+const ctx = document.getElementById('marginChart');
+if (!ctx) return;
+chartInstances.margin = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024', 'Q1 2025', 'Q2 2025', 'Q3 2025'],
+datasets: [{
+label: 'Gross Margin %', data: [35, 36, 37, 38, 40, 41, 42.8],
+backgroundColor: ['rgba(102, 16, 242, 0.5)', 'rgba(102, 16, 242, 0.55)', 'rgba(102, 16, 242, 0.6)', 'rgba(102, 16, 242, 0.65)', 'rgba(102, 16, 242, 0.75)', 'rgba(102, 16, 242, 0.85)', 'rgba(16, 185, 129, 0.9)'],
+borderColor: '#6610f2', borderWidth: 1, borderRadius: 6
+}]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false, min: 30, max: 50, grid: { color: 'rgba(0,0,0,0.05)' } }, x: { grid: { display: false } } }, animation: { duration: 1200, easing: 'easeOutBounce' } }
+});
+}
+function initSegmentChart() {
+const ctx = document.getElementById('segmentChart');
+if (!ctx) return;
+chartInstances.segment = new Chart(ctx, {
+type: 'doughnut',
+data: {
+labels: ['Budget', 'Mid-Market', 'Premium', 'Ultra-Premium'],
+datasets: [{ data: [25, 40, 25, 10], backgroundColor: ['#94a3b8', '#64748b', '#6610f2', '#9d4edd'], borderWidth: 3, borderColor: '#fff' }]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { padding: 15, usePointStyle: true, font: {weight: 'bold', size: 14} } } }, animation: { animateRotate: true, duration: 1500 } }
+});
+}
+function initCriteriaChart() {
+const ctx = document.getElementById('criteriaChart');
+if (!ctx) return;
+chartInstances.criteria = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Comfort', 'Durability', 'Temperature', 'Pain Relief', 'Brand', 'Smart'],
+datasets: [{ label: 'Importance %', data: [95, 87, 72, 68, 58, 35], backgroundColor: ['#6610f2', '#6610f2', '#10b981', '#10b981', '#f59e0b', '#ef4444'], borderRadius: 8 }]
+},
+options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true, max: 100, grid: { color: 'rgba(0,0,0,0.05)' } }, y: { grid: { display: false }, ticks: {font: {weight: 'bold', size: 14}} } }, animation: { duration: 1200, easing: 'easeOutQuart' } }
+});
+}
+function initMarketShareChart() {
+const ctx = document.getElementById('marketShareChart');
+if (!ctx) return;
+chartInstances.marketShare = new Chart(ctx, {
+type: 'pie',
+data: {
+labels: ['Somnigroup', 'Serta Simmons', 'Sleep Number', 'Purple', 'Others'],
+datasets: [{ data: [27.5, 17.5, 9, 2.5, 43.5], backgroundColor: ['#ef4444', '#f59e0b', '#3b82f6', '#6610f2', '#94a3b8'], borderWidth: 3, borderColor: '#fff' }]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { padding: 12, usePointStyle: true, font: {weight: 'bold', size: 14} } } }, animation: { animateRotate: true, duration: 1500 } }
+});
+}
+function initValueCurveChart() {
+const ctx = document.getElementById('valueCurveChart');
+if (!ctx) return;
+chartInstances.valueCurve = new Chart(ctx, {
+type: 'radar',
+data: {
+labels: ['Temperature', 'Pressure Relief', 'Tech Uniqueness', 'Smart/AI', 'Distribution', 'Brand Heritage', 'Clinical Validation'],
+datasets: [
+{ label: 'Purple', data: [5, 5, 5, 2, 3, 2, 4], borderColor: '#6610f2', backgroundColor: 'rgba(102, 16, 242, 0.2)', borderWidth: 3, pointBackgroundColor: '#6610f2' },
+{ label: 'Somnigroup', data: [3, 5, 4, 3, 5, 5, 4], borderColor: '#6b7280', backgroundColor: 'rgba(107, 114, 128, 0.1)', borderWidth: 2, pointBackgroundColor: '#6b7280' },
+{ label: 'Sleep Number', data: [3, 3, 4, 5, 4, 4, 3], borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', borderWidth: 2, pointBackgroundColor: '#3b82f6' },
+{ label: 'Saatva', data: [3, 3, 3, 1, 3, 3, 2], borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', borderWidth: 2, pointBackgroundColor: '#10b981' }
+]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { padding: 15, usePointStyle: true, font: {weight: 'bold', size: 14} } } }, scales: { r: { beginAtZero: true, max: 5, ticks: { stepSize: 1 }, grid: { color: 'rgba(0,0,0,0.1)' }, pointLabels: { font: { size: 14, weight: '800' } } } }, animation: { duration: 1500, easing: 'easeOutQuart' } }
+});
+}
+function initMarginTrendChart() {
+const ctx = document.getElementById('marginTrendChart');
+if (!ctx) return;
+chartInstances.marginTrend = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024', 'Q1 2025', 'Q2 2025', 'Q3 2025'],
+datasets: [{
+label: 'Gross Margin (%)', data: [36, 36, 37, 38, 40, 41, 42.8],
+borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.15)', fill: true, tension: 0.3, borderWidth: 4,
+pointBackgroundColor: '#ffffff', pointBorderColor: '#10b981', pointBorderWidth: 3, pointRadius: 8, pointHoverRadius: 10
+}]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.parsed.y + '%'; } } } }, scales: { y: { beginAtZero: false, min: 34, max: 45, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: function(value) { return value + '%'; }, font: {weight: 'bold', size: 14} } }, x: { grid: { display: false }, ticks: { font: { size: 16, weight: 'bold' } } } }, animation: { duration: 1800, easing: 'easeOutQuint' } }
+});
+}
+function initMarketSharePieChart() {
+const ctx = document.getElementById('marketSharePieChart');
+if (!ctx) return;
+chartInstances.marketSharePie = new Chart(ctx, {
+type: 'pie',
+data: {
+labels: ['Somnigroup', 'Serta Simmons', 'Sleep Number', 'Purple Innovation', 'Others (Fragmented)'],
+datasets: [{ data: [27.5, 17.5, 9.0, 2.5, 43.5], backgroundColor: ['#ef4444', '#f59e0b', '#3b82f6', '#6610f2', '#94a3b8'], borderWidth: 4, borderColor: '#ffffff', hoverOffset: 15 }]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { padding: 20, usePointStyle: true, font: { size: 16, weight: 'bold' } } }, tooltip: { callbacks: { label: function(context) { return context.label + ': ' + context.parsed + '%'; } } } }, layout: { padding: 20 }, animation: { animateRotate: true, animateScale: true, duration: 1500 } }
+});
+}
+function initRevenueBarChart() {
+const ctx = document.getElementById('revenueBarChart');
+if (!ctx) return;
+chartInstances.revenueBar = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Somnigroup', 'Serta Simmons', 'Sleep Number', 'Purple Innovation'],
+datasets: [{
+label: 'Annual Revenue ($ Billions)', data: [4.9, 2.4, 1.68, 0.49],
+backgroundColor: ['rgba(239, 68, 68, 0.8)', 'rgba(245, 158, 11, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(102, 16, 242, 1)'],
+borderColor: ['#ef4444', '#f59e0b', '#3b82f6', '#6610f2'], borderWidth: 2, borderRadius: 8
+}]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return '$' + context.parsed.y + ' Billion'; } } } }, scales: { y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: function(value) { return '$' + value + 'B'; }, font: { size: 16, weight: 'bold' } } }, x: { grid: { display: false }, ticks: { font: { size: 16, weight: 'bold' } } } }, animation: { duration: 1500, easing: 'easeOutBack' } }
+});
+}
+function initValueCurveLineChart() {
+const ctx = document.getElementById('valueCurveLineChart');
+if (!ctx) return;
+chartInstances.valueCurveLine = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['Temperature', 'Pressure Relief', 'Tech Uniqueness', 'Smart/AI', 'Distribution', 'Brand Heritage', 'Clinical Validation'],
+datasets: [
+{ label: 'Purple', data: [5, 5, 5, 1, 3, 2, 4], borderColor: '#6610f2', backgroundColor: 'rgba(102, 16, 242, 0.1)', borderWidth: 5, pointBackgroundColor: '#6610f2', pointRadius: 8, tension: 0.1, fill: true },
+{ label: 'Somnigroup', data: [3, 5, 4, 3, 5, 5, 4], borderColor: '#ef4444', backgroundColor: 'transparent', borderWidth: 3, pointBackgroundColor: '#ef4444', pointRadius: 6, tension: 0.1, borderDash: [5, 5] },
+{ label: 'Sleep Number', data: [3, 3, 4, 5, 4, 4, 3], borderColor: '#3b82f6', backgroundColor: 'transparent', borderWidth: 3, pointBackgroundColor: '#3b82f6', pointRadius: 6, tension: 0.1, borderDash: [5, 5] }
+]
+},
+options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { padding: 20, usePointStyle: true, font: { size: 16, weight: 'bold' } } } }, scales: { y: { beginAtZero: true, max: 5.5, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { stepSize: 1, font: { size: 14, weight: 'bold' } } }, x: { grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 15, weight: 'bold' } } } }, animation: { duration: 2000, easing: 'easeInOutQuart' } }
+});
+}
+function initEbitdaChart() {
+const ctx = document.getElementById('ebitdaChart');
+if (!ctx) return;
+chartInstances.ebitda = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['FY 2024', 'Q3 2025', 'FY 2026 (Target)', 'FY 2027 (Target)', 'FY 2028 (Target)'],
+datasets: [
+{
+type: 'line',
+label: 'Adj. EBITDA Margin %',
+data: [-15.2, 0.1, 1.5, 3.5, 5.2],
+borderColor: '#10b981',
+backgroundColor: '#10b981',
+borderWidth: 4,
+pointRadius: 8,
+pointBackgroundColor: '#ffffff',
+pointBorderWidth: 3,
+yAxisID: 'y1',
+tension: 0.3
+},
+{
+type: 'bar',
+label: 'Adj. EBITDA ($M)',
+data: [-97.9, 0.2, 15.0, 35.0, 60.0],
+backgroundColor: [
+'rgba(239, 68, 68, 0.8)',
+'rgba(16, 185, 129, 0.8)',
+'rgba(102, 16, 242, 0.6)',
+'rgba(102, 16, 242, 0.8)',
+'rgba(102, 16, 242, 1)'
+],
+borderRadius: 8,
+yAxisID: 'y'
+}
+]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+plugins: {
+legend: { position: 'top', labels: { font: { weight: 'bold', size: 14 } } }
+},
+scales: {
+y: {
+type: 'linear',
+display: true,
+position: 'left',
+title: { display: true, text: 'Adj. EBITDA ($M)', font: { weight: 'bold', size: 14 } },
+grid: { color: 'rgba(0,0,0,0.05)' },
+ticks: { font: { size: 14 } }
+},
+y1: {
+type: 'linear',
+display: true,
+position: 'right',
+title: { display: true, text: 'Margin %', font: { weight: 'bold', size: 14 } },
+grid: { drawOnChartArea: false },
+ticks: { font: { size: 14 } }
+},
+x: { ticks: { font: { weight: 'bold', size: 14 } } }
+},
+animation: { duration: 2000, easing: 'easeOutQuart' }
+}
+});
+}
+
+// ==================== EXPORT FUNCTIONS ====================
+function showExportModal(title, status) {
+    const modal = document.getElementById('exportModal');
+    document.getElementById('exportTitle').textContent = title;
+    document.getElementById('exportStatus').textContent = status;
+    document.getElementById('exportProgressBar').style.width = '0%';
+    modal.classList.add('active');
+}
+function updateExportProgress(percent) { document.getElementById('exportProgressBar').style.width = percent + '%'; }
+function hideExportModal() { document.getElementById('exportModal').classList.remove('active'); }
+
+// PDF Export Function
+async function exportToPDF() {
+    const pdfBtn = document.getElementById('pdfBtn');
+    pdfBtn.disabled = true;
+    showExportModal('Generating PDF...', `Preparing all ${totalSlides} slides for export`);
+    
+    try {
+        const originalAnimation = Chart.defaults.animation;
+        Chart.defaults.animation = false;
+        
+        const uiElements = [
+            document.querySelector('.nav-container'),
+            document.querySelector('.progress-container'),
+            document.querySelector('.keyboard-hint'),
+            document.getElementById('exportModal')
+        ];
+        const uiDisplays = uiElements.map(el => el ? el.style.display : '');
+        uiElements.forEach(el => { if (el) el.style.display = 'none'; });
+        
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        
+        const wrapper = document.getElementById('slidesWrapper');
+        
+        // CRITICAL: Disable WINDOW scaling during export so html2canvas captures full 1366x768
+        // Note: The inner dynamic content scaling remains active so content isn't truncated!
+        const originalTransform = wrapper.style.transform;
+        wrapper.style.transform = 'none';
+        
+        const slides = document.querySelectorAll('.slide');
+        const originalStates = [];
+        
+        slides.forEach((slide, index) => {
+            originalStates.push(slide.classList.contains('active'));
+            slide.style.display = 'block'; slide.classList.add('active');
+            slide.style.boxShadow = 'none'; slide.style.transform = 'none';
+            slide.style.margin = '0'; slide.style.borderRadius = '0';
+            slide.style.width = '1366px'; slide.style.height = '768px';
+            slide.style.maxHeight = '768px'; slide.style.overflow = 'hidden';
+            slide.style.pageBreakInside = 'avoid';
+            if (index < slides.length - 1) slide.style.pageBreakAfter = 'always';
+            else slide.style.pageBreakAfter = 'auto';
+        });
+        
+        for (let i = 1; i <= totalSlides; i++) {
+            initChartsForSlide(i);
+            updateExportProgress((i / totalSlides) * 50);
+        }
+        await new Promise(resolve => setTimeout(resolve, 800));
+        updateExportProgress(60);
+        
+        const modal = document.getElementById('exportModal');
+        if (modal) {
+            modal.style.display = 'flex';
+            document.getElementById('exportStatus').textContent = 'Rendering PDF (This may take a moment)...';
+            await new Promise(resolve => requestAnimationFrame(resolve));
+            modal.style.display = 'none';
+        }
+        
+        const opt = {
+            margin: 0, filename: 'Purple_Innovation_Strategic_Analysis_2026.pdf',
+            image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: {
+                scale: 2, useCORS: true, logging: false, windowWidth: 1366, scrollY: 0,
+                ignoreElements: (element) => {
+                    return element.classList && (
+                        element.classList.contains('export-modal') || element.classList.contains('nav-container') ||
+                        element.classList.contains('progress-container') || element.classList.contains('keyboard-hint')
+                    );
+                }
+            },
+            jsPDF: { unit: 'px', format: [1366, 768], orientation: 'landscape' },
+            pagebreak: { mode: 'css' }
+        };
+        
+        await html2pdf().set(opt).from(wrapper).save();
+        
+        // Restore everything
+        wrapper.style.transform = originalTransform;
+        Chart.defaults.animation = originalAnimation;
+        
+        slides.forEach((slide, index) => {
+            slide.style.boxShadow = ''; slide.style.transform = '';
+            slide.style.pageBreakAfter = ''; slide.style.pageBreakInside = '';
+            slide.style.margin = ''; slide.style.borderRadius = '';
+            slide.style.width = ''; slide.style.height = '';
+            slide.style.maxHeight = ''; slide.style.overflow = '';
+            if (!originalStates[index]) { slide.classList.remove('active'); slide.style.display = ''; }
+        });
+        
+        uiElements.forEach((el, index) => { if (el) el.style.display = uiDisplays[index]; });
+        initChartsForSlide(currentSlide);
+        scaleSlides(); // Re-trigger window scaling
+        
+        updateExportProgress(100);
+        if (modal) modal.style.display = 'flex';
+        document.getElementById('exportTitle').textContent = 'PDF Ready!';
+        document.getElementById('exportStatus').textContent = 'Your download should begin automatically';
+        setTimeout(hideExportModal, 2000);
+        
+    } catch (error) {
+        console.error('PDF export error:', error);
+        const modal = document.getElementById('exportModal');
+        if (modal) modal.style.display = 'flex';
+        document.getElementById('exportTitle').textContent = 'Export Failed';
+        document.getElementById('exportStatus').textContent = 'Please try again';
+        setTimeout(hideExportModal, 3000);
+    }
+    pdfBtn.disabled = false;
+}
+
+// PPTX Export Function
+async function exportToPPTX() {
+    const pptxBtn = document.getElementById('pptxBtn');
+    pptxBtn.disabled = true;
+    showExportModal('Generating PowerPoint...', 'Capturing HTML slides for exact match export');
+    
+    try {
+        const originalAnimation = Chart.defaults.animation;
+        Chart.defaults.animation = false;
+        
+        const uiElements = [
+            document.querySelector('.nav-container'), document.querySelector('.progress-container'),
+            document.querySelector('.keyboard-hint'), document.getElementById('exportModal')
+        ];
+        const uiDisplays = uiElements.map(el => el ? el.style.display : '');
+        uiElements.forEach(el => { if (el) el.style.display = 'none'; });
+        
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+        
+        const wrapper = document.getElementById('slidesWrapper');
+        
+        // CRITICAL: Disable WINDOW scaling during export
+        const originalTransform = wrapper.style.transform;
+        wrapper.style.transform = 'none';
+        
+        const slides = document.querySelectorAll('.slide');
+        const originalStates = [];
+        
+        slides.forEach((slide, index) => {
+            originalStates.push(slide.classList.contains('active'));
+            slide.style.display = 'block'; slide.classList.add('active');
+            slide.style.boxShadow = 'none'; slide.style.transform = 'none';
+            slide.style.margin = '0'; slide.style.borderRadius = '0';
+            slide.style.border = 'none'; slide.style.width = '1366px';
+            slide.style.height = '768px'; slide.style.maxHeight = '768px';
+            slide.style.overflow = 'hidden';
+        });
+        
+        for (let i = 1; i <= totalSlides; i++) { initChartsForSlide(i); }
+        await new Promise(resolve => setTimeout(resolve, 800));
+        
+        const pptx = new PptxGenJS();
+        pptx.author = 'Purple Innovation Analysis'; pptx.title = 'Purple Innovation Industry Analysis';
+        pptx.subject = 'Strategic Assessment 2026';
+        
+        // Set layout to match 1366x768 aspect ratio (16:9)
+        pptx.defineLayout({ name: 'CUSTOM_LAYOUT', width: 13.66, height: 7.68 });
+        pptx.layout = 'CUSTOM_LAYOUT';
+        
+        const modal = document.getElementById('exportModal');
+        if (modal) modal.style.display = 'flex';
+        
+        for (let i = 0; i < slides.length; i++) {
+            updateExportProgress(((i + 1) / slides.length) * 90);
+            document.getElementById('exportStatus').textContent = `Capturing slide ${i + 1} of ${slides.length}...`;
+            await new Promise(resolve => requestAnimationFrame(resolve));
+            
+            if (modal) modal.style.display = 'none';
+            const canvas = await html2canvas(slides[i], { scale: 2, useCORS: true, logging: false, windowWidth: 1366, scrollY: 0 });
+            const imgData = canvas.toDataURL('image/jpeg', 0.98);
+            
+            const pptxSlide = pptx.addSlide();
+            pptxSlide.addImage({ data: imgData, x: 0, y: 0, w: 13.66, h: 7.68 });
+            if (modal) modal.style.display = 'flex';
+        }
+        
+        updateExportProgress(95);
+        document.getElementById('exportStatus').textContent = 'Finalizing presentation...';
+        await pptx.writeFile({ fileName: 'Purple_Innovation_Strategic_Analysis_2026.pptx' });
+        
+        // Restore everything
+        wrapper.style.transform = originalTransform;
+        Chart.defaults.animation = originalAnimation;
+        
+        slides.forEach((slide, index) => {
+            slide.style.boxShadow = ''; slide.style.transform = '';
+            slide.style.margin = ''; slide.style.borderRadius = '';
+            slide.style.border = ''; slide.style.width = '';
+            slide.style.height = ''; slide.style.maxHeight = '';
+            slide.style.overflow = '';
+            if (!originalStates[index]) { slide.classList.remove('active'); slide.style.display = ''; }
+        });
+        
+        uiElements.forEach((el, index) => { if (el) el.style.display = uiDisplays[index]; });
+        initChartsForSlide(currentSlide);
+        scaleSlides(); // Re-trigger window scaling
+        
+        updateExportProgress(100);
+        if (modal) modal.style.display = 'flex';
+        document.getElementById('exportTitle').textContent = 'PowerPoint Ready!';
+        document.getElementById('exportStatus').textContent = 'Your download should begin automatically';
+        setTimeout(hideExportModal, 2000);
+        
+    } catch (error) {
+        console.error('PPTX export error:', error);
+        const modal = document.getElementById('exportModal');
+        if (modal) modal.style.display = 'flex';
+        document.getElementById('exportTitle').textContent = 'Export Failed';
+        document.getElementById('exportStatus').textContent = 'Please try again';
+        setTimeout(hideExportModal, 3000);
+    }
+    pptxBtn.disabled = false;
+}
+
+// Initialize
+document.getElementById('totalSlides').textContent = totalSlides;
+// Apply dynamic content scaling first
+applyDynamicScaling();
+// Then apply window scaling
+scaleSlides();
+// Finally show the first slide
+showSlide(1);
+</script>
+</body>
+</html>
