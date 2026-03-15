@@ -116,36 +116,44 @@ display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; box-shadow:
 .progress-bar { height: 100%; background: var(--purple-gradient); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0 3px 3px 0; box-shadow: 0 0 10px rgba(102, 16, 242, 0.5); }
 
 /* Presentation Area & Scaling Wrapper */
+/* Presentation Area & Scaling Wrapper */
 .presentation-area {
-    padding-top: 80px; /* Reduced to give more room */
     display: flex;
     justify-content: center;
-    align-items: center; /* Centered for better presentation feel */
+    align-items: flex-start; /* Pin to top for header safety */
     width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
+    height: calc(100vh - 68px); 
+    margin-top: 68px;
+    background: #f1f5f9;
     overflow: hidden;
+    position: relative;
+    padding-top: 40px; /* Safe space below nav bar */
 }
 .slides-wrapper {
     position: relative;
     width: 1366px;
     height: 768px;
-    transform-origin: top center;
-    /* Transform scale is applied via JS */
+    transform: scale(1);
+    transform-origin: center top;
+    will-change: transform;
+    flex-shrink: 0;
 }
 
-/* Slide Container - NEW 1366x768 DIMENSIONS */
+/* Slide Container */
 .slide {
     width: 1366px; 
     height: 768px; 
-    background: var(--bg-base); border-radius: 24px;
-    box-shadow: var(--shadow-xl), var(--shadow-glow); overflow: hidden; position: absolute;
+    background: var(--bg-base); 
+    border-radius: 20px;
+    box-shadow: 0 40px 100px -20px rgba(0,0,0,0.2); 
+    overflow: hidden; 
+    position: absolute;
     top: 0; left: 0;
-    display: none; animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255,255,255,0.5);
+    display: none; 
+    border: 1px solid rgba(255,255,255,0.8);
 }
 .slide.active { display: block; }
-@keyframes slideIn { from { opacity: 0; transform: translateY(40px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Slide Headers */
 .slide-header { background: var(--purple-gradient); padding: 2.5rem 4rem; position: relative; overflow: hidden; }
@@ -161,8 +169,9 @@ display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; box-shadow:
     display: flex; 
     flex-direction: column; 
     flex-grow: 1; 
-    justify-content: center; /* Helps center charts/content vertically */
-    height: calc(768px - 140px); /* Fixed height container minus header */
+    justify-content: flex-start; /* Start from top, scaling will handle fitting */
+    height: 628px; /* Fixed height for content area (768 - 140 header) */
+    position: relative;
 }
 
 /* Title Slide - Premium Redesign */
@@ -642,6 +651,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
         <p class="subtitle">Broad-spectrum mattress industry valuations and projections</p>
     </div>
     <div class="slide-content">
+        <div class="grid-2">
             <div class="card">
                 <div class="card-header"><div class="card-icon blue">🌐</div><span class="card-title">Global vs. US CAGR Benchmark</span></div>
                 <div class="chart-container" style="height: 350px;"><canvas id="globalGrowthChart"></canvas></div>
@@ -650,16 +660,15 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                 <div class="card-header"><div class="card-icon purple">💰</div><span class="card-title">Regional Valuation Mix (2026)</span></div>
                 <div class="chart-container" style="height: 350px;"><canvas id="regionalMixChart"></canvas></div>
             </div>
-                    </div>
-                    <div class="stat-card" style="border-left: 4px solid var(--purple-primary);">
-                        <div class="stat-value">3.62%</div>
-                        <div class="stat-label">U.S. CAGR (2026-2031)</div>
-                    </div>
-                    <div class="stat-card" style="border-left: 4px solid var(--amber);">
-                        <div class="stat-value">35.9M</div>
-                        <div class="stat-label">Annual Unit Sales</div>
-                    </div>
-                </div>
+        </div>
+        <div class="stat-grid" style="margin-top: 2rem;">
+            <div class="stat-card" style="border-left: 4px solid var(--purple-primary);">
+                <div class="stat-value">3.62%</div>
+                <div class="stat-label">U.S. CAGR (2026-2031)</div>
+            </div>
+            <div class="stat-card" style="border-left: 4px solid var(--amber);">
+                <div class="stat-value">35.9M</div>
+                <div class="stat-label">Annual Unit Sales</div>
             </div>
         </div>
         <div class="info-box teal" style="margin-top: 1.5rem;">
@@ -706,19 +715,17 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
 <section class="slide" data-slide="6">
     <div class="slide-header">
         <h2>📈 Path to Profitability</h2>
-        <p class="subtitle">Gross Margin Improvement Trend (Q1 2024 - Q3 2025)</p>
+        <p class="subtitle" style="margin-bottom: 0.5rem;">Gross Margin Improvement Trend (Q1 2024 - Q3 2025)</p>
     </div>
-    <div class="slide-content">
-        <div class="card" style="height: 100%;">
-            <div class="card-header">
-                <div class="card-icon purple">🚀</div>
-                <span class="card-title">Consecutive Quarter-over-Quarter Growth</span>
-                <span class="tag tag-teal" style="margin-left: auto;">+700 Basis Points</span>
-            </div>
-            <div class="chart-container large" style="height: 400px;"><canvas id="marginTrendChart"></canvas></div>
-            <div style="margin-top: 1.5rem; padding: 1.5rem; background: var(--purple-light); border-radius: 16px; border: 1px solid rgba(102, 16, 242, 0.1);">
-                <strong style="color: var(--purple-primary); font-size: 1.1rem;">Strategic Insight:</strong> The sustained expansion of gross margin from 36% to 42.8% highlights successful manufacturing efficiencies and a strategic transition toward a premium product mix with higher average selling prices.
-            </div>
+    <div class="slide-content" style="padding: 1rem; overflow: visible;">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <div class="card-icon purple">🚀</div>
+            <span class="card-title" style="font-weight: 700; margin-left: 0.5rem;">Consecutive Quarter-over-Quarter Growth</span>
+            <span class="tag tag-teal" style="margin-left: auto;">+700 Basis Points</span>
+        </div>
+        <div class="chart-container large" style="height: 320px; margin-bottom: 1rem; overflow: visible;"><canvas id="marginTrendChart"></canvas></div>
+        <div style="padding: 1rem; background: var(--purple-light); border-radius: 12px; border: 1px solid rgba(102, 16, 242, 0.1); font-size: 0.9rem;">
+            <strong style="color: var(--purple-primary); font-size: 1rem;">Strategic Insight:</strong> The sustained expansion of gross margin from 36% to 42.8% highlights successful manufacturing efficiencies and a transition toward a premium product mix with higher average selling prices.
         </div>
     </div>
     <div class="slide-number">6 / 47</div>
@@ -978,11 +985,6 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
     </div>
     <div class="slide-number">12 / 47</div>
 </section>
-</div>
-</div>
-</div>
-<div class="slide-number">12 / 47</div>
-</section>
 <!-- Slide 11: Porter's Five Forces Overview -->
 <section class="slide" data-slide="13">
     <div class="slide-header">
@@ -1027,6 +1029,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
         <p class="subtitle">Strategic implications for Purple Innovation</p>
     </div>
     <div class="slide-content">
+        <div class="grid-2">
             <div class="card">
                 <div class="card-header"><div class="card-icon teal">🛡️</div><span class="card-title">Entry Barrier Evaluation</span></div>
                 <table class="data-table" style="font-size: 0.8rem; margin-top: 1rem;">
@@ -1051,12 +1054,14 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                     </tbody>
                 </table>
             </div>
-                    <li style="color: var(--rose-dark);"><strong>Buyer Bargaining:</strong> Free trials and aggressive discounting across industry.</li>
-                    <li style="color: var(--rose-dark);"><strong>Intense Rivalry:</strong> TPX Scale (10x revenue) allows for massive ad spend advantage.</li>
-                    <li style="color: var(--amber-dark);"><strong>Substitutes:</strong> Emergence of biometric-integrated sleep systems (SNBR).</li>
-                    <li><strong>Distribution:</strong> Limited physical footprint vs. legacy players.</li>
-                </ul>
-            </div>
+        </div>
+        <div class="card" style="margin-top: 2rem;">
+            <ul class="feature-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <li style="color: var(--rose-dark);"><strong>Buyer Bargaining:</strong> Free trials and aggressive discounting across industry.</li>
+                <li style="color: var(--rose-dark);"><strong>Intense Rivalry:</strong> TPX Scale (10x revenue) allows for massive ad spend advantage.</li>
+                <li style="color: var(--amber-dark);"><strong>Substitutes:</strong> Emergence of biometric-integrated sleep systems (SNBR).</li>
+                <li><strong>Distribution:</strong> Limited physical footprint vs. legacy players.</li>
+            </ul>
         </div>
     </div>
     <div class="slide-number">14 / 47</div>
@@ -1272,39 +1277,30 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                         <span style="color: var(--text-muted); font-size: 1rem;">$1,995 - $3,495</span>
                     </div>
                 </div>
-                <div class="pyramid-tier tier-mid" style="background: white; border: 1px solid var(--border-light);">
+                <div class="pyramid-tier tier-budget" style="background: white; border: 1px solid var(--border-light);">
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-                        <span style="font-weight: 800; color: var(--text-primary); font-size: 1.1rem;">Essential Collection</span>
-                        <span style="color: var(--text-muted); font-size: 0.95rem;">$1,095 - $1,995</span>
+                        <span style="font-weight: 800; color: var(--text-muted); font-size: 1rem;">Budget Segment (Avoided)</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Under $1,000</span>
                     </div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; display: flex; justify-content: space-around; text-align: center;">
+                <div>
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">DreamLayer™</div>
+                    <div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Ultra-Premium Tech</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">GelFlex® Grid</div>
+                    <div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Core Technology</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">42.8%</div>
+                    <div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Q3 Gross Margin</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="slide-number">20 / 47</div>
-</section>
-<div class="pyramid-tier tier-budget">
-<span>Budget Segment (Avoided)</span>
-<span>Under $1,000</span>
-</div>
-</div>
-<div style="margin-top: 3rem; display: flex; justify-content: space-around; text-align: center;">
-<div>
-<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">DreamLayer™</div>
-<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Ultra-Premium Tech</div>
-</div>
-<div>
-<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">GelFlex® Grid</div>
-<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Core Technology</div>
-</div>
-<div>
-<div style="font-size: 2rem; font-weight: 900; color: var(--purple-primary);">42.8%</div>
-<div style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">Q3 Gross Margin</div>
-</div>
-</div>
-</div>
-</div>
-<div class="slide-number">20 / 47</div>
 </section>
 <!-- Slide 18: Value Proposition -->
 <section class="slide" data-slide="21">
@@ -1876,6 +1872,9 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                     <li><strong>AI Ecosystem:</strong> 15M SleepIQ users create a recurring brand relationship SNBR enjoys.</li>
                     <li><strong>Smart Pilot:</strong> Essential by FY2027 to avoid being perceived as a "dumb" surface.</li>
                 </ul>
+            </div>
+        </div>
+    </div>
     <div class="slide-number">37 / 47</div>
 </section>
 
@@ -2081,67 +2080,91 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
     </div>
     <div class="slide-number">44 / 47</div>
 </section>
-<!-- Slide 39: References 1 -->
+
+<!-- Slide 45: References 1 -->
 <section class="slide" data-slide="45">
     <div class="slide-header">
         <h2>📚 Strategic References (1/2)</h2>
         <p class="subtitle">Primary industry research and market intelligence</p>
     </div>
     <div class="slide-content">
-        <div class="apa-references" style="column-count: 2; column-gap: 3rem; background: var(--bg-surface); padding: 2rem; border-radius: 16px; border: 1px solid rgba(102, 16, 242, 0.1);">
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Federal Trade Commission. (2024). <em>FTC moves to block Tempur Sealy's acquisition of Mattress Firm</em>. https://www.ftc.gov/news-events/news/press-releases/2024/07/ftc-moves-block-tempur-sealys-acquisition-mattress-firm
+        <div class="apa-references" style="column-count: 2; column-gap: 3rem; background: var(--bg-surface); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(102, 16, 242, 0.1); font-size: 0.72rem;">
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Federal Trade Commission. (2024, July 1). <em>FTC moves to block Tempur Sealy's acquisition of Mattress Firm</em>. https://www.ftc.gov/news-events/news/press-releases/2024/07/ftc-moves-block-tempur-sealys-acquisition-mattress-firm
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Furniture Today. (2025). <em>Purple expands Mattress Firm deal, eyes $70M in new sales in 2,300 stores</em>. https://www.furnituretoday.com/financial/purple-expands-mattress-firm-deal/
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Furniture Today. (2025, May 6). <em>Purple expands Mattress Firm deal, eyes $70M in new sales in 2,300 stores</em>. https://www.furnituretoday.com/financial/purple-expands-mattress-firm-deal-eyes-70m-in-new-sales-in-2300-stores/
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                IBISWorld. (2026). <em>Mattress manufacturing in the US: Market research report (NAICS 337910)</em>. Industry Report.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                IBISWorld. (2026a). <em>Mattress manufacturing in the US: Market research report (NAICS 337910)</em>. IBISWorld Industry Report.
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                ISPA. (2026). <em>ISPA industry forecast 2026: Navigating a slow climb ahead</em>. Bedtimes Magazine.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                International Sleep Products Association. (2026). <em>ISPA industry forecast 2026</em>. Bedtimes Magazine. https://bedtimesmagazine.com/2026/01/mattress-industry-outlook-navigating-a-slow-climb-ahead/
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Mintel. (2025). <em>US pillows and mattresses market report 2025/2026</em>. Mintel Group Ltd.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Mintel. (2024). <em>US pillows and mattresses market report 2024</em>. Mintel Group Ltd.
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Mordor Intelligence. (2026). <em>United States mattress market size, analysis & share report 2031</em>.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Mordor Intelligence. (2026). <em>United States mattress market size, analysis & share report 2031</em>. https://www.mordorintelligence.com/industry-reports/united-states-mattress-market
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Podium. (2024). <em>15 key mattress industry statistics & trends for 2025</em>. https://www.podium.com/article/mattress-industry-statistics
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Pratap, A. (2025). <em>Purple Innovation competitive analysis</em>. NotesOnStrategy.
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                PRNewswire. (2025, December 15). <em>Independent studies show Purple Innovation's Essential and Restore mattresses help relieve pain and improve sleep quality</em>. https://www.prnewswire.com/news-releases/independent-studies-show-purple-innovations-essential-and-restore-mattresses-with-gelflex-grid-technology-help-relieve-pain-and-improve-sleep-quality-302334568.html
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Purple Innovation, Inc. (n.d.). <em>GelFlex Grid technology</em>. https://purple.com/purple-grid
             </div>
         </div>
     </div>
     <div class="slide-number">45 / 47</div>
 </section>
-<!-- Slide 40: References 2 -->
+
+<!-- Slide 46: References 2 -->
 <section class="slide" data-slide="46">
     <div class="slide-header">
         <h2>📚 Strategic References (2/2)</h2>
         <p class="subtitle">Corporate reporting and clinical validation data</p>
     </div>
     <div class="slide-content">
-        <div class="apa-references" style="column-count: 2; column-gap: 3rem; background: var(--bg-surface); padding: 2rem; border-radius: 16px; border: 1px solid rgba(102, 16, 242, 0.1);">
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                PRNewswire. (2025). <em>Independent studies show Purple's GelFlex Grid relieves pain and improves sleep quality</em>. https://www.prnewswire.com/news-releases/independent-studies-gelflex/
+        <div class="apa-references" style="column-count: 2; column-gap: 3rem; background: var(--bg-surface); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(102, 16, 242, 0.1); font-size: 0.72rem;">
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Purple Innovation, Inc. (2025a, December 15). <em>Independent studies show Purple Innovation's Essential and Restore mattresses with GelFlex Grid technology help relieve pain and improve sleep quality [Press release]</em>. https://investors.purple.com/news/news-details/2025/Independent-studies-show-Purple-Innovations-Essential-and-Restore-mattresses-with-GelFlex-Grid-technology-help-relieve-pain-and-improve-sleep-quality/default.aspx
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Purple Innovation, Inc. (2025). <em>Q4 and Full Year 2024 Results: Path to Profitability</em>. Investor Relations.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Purple Innovation, Inc. (2025b, March 12). <em>Purple Innovation reports fourth quarter and full year 2024 results [Press release]</em>. https://investors.purple.com/news/news-details/2025/Purple-Innovation-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Purple Innovation, Inc. (2025). <em>Strategic Expansion: Commercial Relationship with Somnigroup International</em>.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Purple Innovation, Inc. (2025c, May 5). <em>Purple announces significant expansion of commercial relationship with Somnigroup International [Press release]</em>. https://investors.purple.com/news/news-details/2025/Purple-Announces-Significant-Expansion-of-Commercial-Relationship-with-Somnigroup-International/default.aspx
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Sleep Number Corporation. (2024). <em>Sleep Number 360 Smart Bed Technology Impact Report</em>.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Sleep Number Corporation. (2024). <em>Sleep Number 360 smart bed technology</em>. Sleep Number Corporation.
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                Somnigroup International. (2024). <em>Annual Report 2024: Market Positioning and Ecosystem Growth</em>.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Somnigroup International. (2024). <em>Annual report 2024</em>. Somnigroup International, Inc.
             </div>
-            <div class="reference" style="margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.4;">
-                SleepScore Labs. (2025). <em>Clinical Validation of Purple GelFlex Grid technology</em>. Private Report.
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                StockAnalysis. (2026). <em>Purple Innovation (PRPL) stock analysis</em>. https://stockanalysis.com/stocks/prpl/
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                TipRanks. (2025). <em>Purple Innovation (PRPL) stock forecast & analyst ratings</em>. TipRanks Financial Accountability Engine.
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Walker, M. (2017). <em>Why we sleep: Unlocking the power of sleep and dreams</em>. Scribner.
+            </div>
+            <div class="reference" style="margin-bottom: 0.5rem; line-height: 1.3;">
+                Around Business. (2026, March 3). <em>Is Purple Mattress going out of business? Ongoing growth</em>. https://aroundbusiness.co.uk/is-purple-mattress-going-out-of-business/
             </div>
         </div>
     </div>
     <div class="slide-number">46 / 47</div>
 </section>
-<!-- Slide 41: Conclusion -->
+
+<!-- Slide 47: Conclusion -->
 <section class="slide" data-slide="47">
     <div class="thank-you-slide" style="background: var(--purple-gradient); border-radius: 24px; padding: 4rem;">
         <h2 style="font-size: 4rem; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">Thank You</h2>
@@ -2162,7 +2185,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
         </div>
         <p style="margin-top: 4rem; opacity: 0.6; font-size: 0.9rem;">Analysis Date: March 2026 | Purple Innovation, Inc. Internal Report</p>
     </div>
-    <div class="slide-number" style="color: rgba(255,255,255,0.5);">47 / 47</div>
+    <div class="slide-number" style="color: rgba(255,255,255,0.5); bottom: 1.5rem;">47 / 47</div>
 </section>
 
 </div> <!-- End slides-wrapper -->
@@ -2174,54 +2197,42 @@ Use <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd> to navigate
 
 <script>
 // ==================== DYNAMIC CONTENT SCALING (THE FIX) ====================
+/**
+ * Scales the content of the active slide to fit within the 1366x768 slide area.
+ * Only processes the active slide to avoid ghosting or unnecessary calculations.
+ */
 function applyDynamicScaling() {
-    const slides = document.querySelectorAll('.slide');
+    const activeSlide = document.querySelector('.slide.active');
+    if (!activeSlide) return;
+
+    const content = activeSlide.querySelector('.slide-content');
+    const header = activeSlide.querySelector('.slide-header');
     
-    slides.forEach(slide => {
-        // Temporarily show slide to measure accurately without layout shifts
-        const isHidden = window.getComputedStyle(slide).display === 'none';
-        if (isHidden) {
-            slide.style.display = 'block';
-            slide.style.visibility = 'hidden';
-            slide.style.position = 'absolute';
-        }
-
-        const content = slide.querySelector('.slide-content');
-        const header = slide.querySelector('.slide-header');
+    if (content && header) {
+        // Reset scale for accurate measurement
+        content.style.transform = 'none';
+        content.style.width = '100%';
+        content.style.marginLeft = '0';
         
-        if (content && header) {
-            // Reset any previous scaling
-            content.style.transform = 'none';
-            content.style.width = '100%';
-            content.style.marginLeft = '0';
-            
-            // Calculate available height vs actual content height
-            const slideHeight = 768;
-            const headerHeight = header.offsetHeight;
-            // Available height for content (subtracting header and a 30px bottom buffer)
-            const availableHeight = slideHeight - headerHeight - 30; 
-            const actualHeight = content.scrollHeight;
+        const slideHeight = 768;
+        const headerHeight = header.offsetHeight;
+        // Increase bottom buffer to 60px to avoid nav overlap
+        const availableHeight = slideHeight - headerHeight - 60; 
+        
+        // Temporarily unset flex/height constraints to measure true content height
+        const originalDisplay = content.style.display;
+        content.style.display = 'block'; 
+        const actualHeight = content.scrollHeight;
+        content.style.display = originalDisplay;
 
-            // If content is taller than available space, scale it down
-            if (actualHeight > availableHeight) {
-                const scale = availableHeight / actualHeight;
-                
-                content.style.transformOrigin = 'top center';
-                content.style.transform = `scale(${scale})`;
-                
-                // Compensate width so it still takes full horizontal space after scaling
-                content.style.width = `${100 / scale}%`;
-                content.style.marginLeft = `${(100 - (100 / scale)) / 2}%`;
-            }
+        if (actualHeight > availableHeight) {
+            const scale = availableHeight / actualHeight;
+            content.style.transformOrigin = 'top center';
+            content.style.transform = `scale(${scale})`;
+            content.style.width = `${100 / scale}%`;
+            content.style.marginLeft = `${(100 - (100 / scale)) / 2}%`;
         }
-
-        // Restore original visibility state
-        if (isHidden) {
-            slide.style.display = '';
-            slide.style.visibility = '';
-            slide.style.position = '';
-        }
-    });
+    }
 }
 
 // ==================== WINDOW AUTO-FIT SCALING ====================
@@ -2230,18 +2241,15 @@ function scaleSlides() {
     const slideWidth = 1366;
     const slideHeight = 768;
     
-    // Calculate available space in the viewport
-    const availableWidth = window.innerWidth - 40;
+    // Calculate available space (viewport minus top nav and buffers)
+    const availableWidth = window.innerWidth - 60;
     const availableHeight = window.innerHeight - 110;
     
-    // Calculate scale ratios
     const scaleX = availableWidth / slideWidth;
     const scaleY = availableHeight / slideHeight;
-    
-    // Use the smaller scale to ensure it fits both horizontally and vertically
     const scale = Math.min(scaleX, scaleY);
     
-    // Apply transform
+    // Pure scale, parent Flexbox handles centering
     wrapper.style.transform = `scale(${scale})`;
 }
 
@@ -2300,6 +2308,14 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault(); currentSlide = 1; showSlide(currentSlide);
     } else if (e.key === 'End') {
         e.preventDefault(); currentSlide = totalSlides; showSlide(currentSlide);
+    }
+    
+    // Hide navigation hint on first interaction
+    const hint = document.querySelector('.keyboard-hint');
+    if (hint) {
+        hint.style.transition = 'opacity 0.5s ease';
+        hint.style.opacity = '0';
+        setTimeout(() => hint.style.display = 'none', 500);
     }
 });
 
