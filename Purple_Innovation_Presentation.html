@@ -117,13 +117,14 @@ display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; box-shadow:
 
 /* Presentation Area & Scaling Wrapper */
 .presentation-area {
-    padding-top: 90px;
+    padding-top: 80px; /* Reduced to give more room */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Centered for better presentation feel */
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .slides-wrapper {
     position: relative;
@@ -155,7 +156,14 @@ display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; box-shadow:
 .slide-header .subtitle { color: rgba(255,255,255,0.9); font-size: 1.3rem; margin-top: 0.5rem; position: relative; z-index: 1; font-weight: 500;}
 
 /* Slide Content */
-.slide-content { padding: 3rem 4rem; display: flex; flex-direction: column; }
+.slide-content { 
+    padding: 2.5rem 4rem; 
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+    justify-content: center; /* Helps center charts/content vertically */
+    height: calc(768px - 140px); /* Fixed height container minus header */
+}
 
 /* Title Slide - Premium Redesign */
 .title-slide { 
@@ -658,7 +666,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             <strong>Premiumization Trend:</strong> Consumers prioritize sleep quality investments aligned with wellness, offsetting unit volume softness with higher Average Selling Prices (ASP).
         </div>
     </div>
-    <div class="slide-number">4 / ??</div>
+    <div class="slide-number">4 / 47</div>
 </section>
 <!-- Slide 4: Company Profile -->
 <section class="slide" data-slide="5">
@@ -815,7 +823,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             <strong>Recovery Outlook:</strong> Shipments are expected to remain flat through 2026, with a low single-digit recovery projected for 2027 as mortgage rates stabilize.
         </div>
     </div>
-    <div class="slide-number">8 / ??</div>
+    <div class="slide-number">9 / 47</div>
 </section>
 <!-- Slide 8: Demographic Shifts -->
 <section class="slide" data-slide="10">
@@ -1207,7 +1215,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             <strong>Political/Trade Moat:</strong> Vertical integration provides a "Made in USA" positioning while mitigating the moderate risks identified in PESTEL (trade policy volatility).
         </div>
     </div>
-    <div class="slide-number">16 / ??</div>
+    <div class="slide-number">18 / 47</div>
 </section>
 <!-- Slide 16: Market Segmentation -->
 <section class="slide" data-slide="19">
@@ -1620,7 +1628,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             </div>
         </div>
     </div>
-    <div class="slide-number">26 / ??</div>
+    <div class="slide-number">29 / 47</div>
 </section>
 
 <!-- Slide 27: Competitor Profile: Serta Simmons (NEW) -->
@@ -1660,7 +1668,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             </div>
         </div>
     </div>
-    <div class="slide-number">27 / ??</div>
+    <div class="slide-number">30 / 47</div>
 </section>
 <!-- Slide 26: Value Curve Radar -->
 <section class="slide" data-slide="31">
@@ -1894,7 +1902,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
             <strong>High Barrier to Entry:</strong> No major legacy competitor possessing equivalent peer-reviewed clinical data backing material-specific health outcomes.
         </div>
     </div>
-    <div class="slide-number">33 / ??</div>
+    <div class="slide-number">38 / 47</div>
 </section>
 <!-- Slide 33: The Advantage Formula -->
 <section class="slide" data-slide="39">
@@ -2256,6 +2264,8 @@ function showSlide(n) {
     const progress = (currentSlide / totalSlides) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
     
+    // Ensure content fits within the slide boundaries on entry
+    applyDynamicScaling();
     initChartsForSlide(currentSlide);
 }
 
@@ -2967,12 +2977,18 @@ async function exportToPPTX() {
 
 // Initialize
 document.getElementById('totalSlides').textContent = totalSlides;
-// Apply dynamic content scaling first
-applyDynamicScaling();
-// Then apply window scaling
-scaleSlides();
-// Finally show the first slide
-showSlide(1);
+
+window.addEventListener('load', () => {
+    // Apply dynamic content scaling first
+    applyDynamicScaling();
+    // Then apply window scaling
+    scaleSlides();
+    // Finally show the first slide
+    showSlide(1);
+    
+    // Re-verify scaling after a short delay to account for late-loading charts/images
+    setTimeout(applyDynamicScaling, 500);
+});
 </script>
 </body>
 </html>
