@@ -634,30 +634,14 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
         <p class="subtitle">Broad-spectrum mattress industry valuations and projections</p>
     </div>
     <div class="slide-content">
-        <div class="grid-2">
             <div class="card">
-                <div class="card-header"><div class="card-icon blue">🌐</div><span class="card-title">Global Valuations</span></div>
-                <div class="stat-grid" style="grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem;">
-                    <div class="stat-card" style="border-left: 4px solid var(--blue);">
-                        <div class="stat-value">$57.31B</div>
-                        <div class="stat-label">Global Market (2026)</div>
-                    </div>
-                    <div class="stat-card" style="border-left: 4px solid var(--teal);">
-                        <div class="stat-value">$78.06B</div>
-                        <div class="stat-label">2031 Forecast</div>
-                    </div>
-                    <div class="stat-card" style="border-left: 4px solid var(--purple-primary);">
-                        <div class="stat-value">6.38%</div>
-                        <div class="stat-label">Global CAGR</div>
-                    </div>
-                </div>
+                <div class="card-header"><div class="card-icon blue">🌐</div><span class="card-title">Global vs. US CAGR Benchmark</span></div>
+                <div class="chart-container" style="height: 350px;"><canvas id="globalGrowthChart"></canvas></div>
             </div>
             <div class="card">
-                <div class="card-header"><div class="card-icon teal">🇺🇸</div><span class="card-title">U.S. Retail Dimensions</span></div>
-                <div class="stat-grid" style="grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem;">
-                    <div class="stat-card" style="border-left: 4px solid var(--teal);">
-                        <div class="stat-value">$18.77B</div>
-                        <div class="stat-label">U.S. Retail Retail Market</div>
+                <div class="card-header"><div class="card-icon purple">💰</div><span class="card-title">Regional Valuation Mix (2026)</span></div>
+                <div class="chart-container" style="height: 350px;"><canvas id="regionalMixChart"></canvas></div>
+            </div>
                     </div>
                     <div class="stat-card" style="border-left: 4px solid var(--purple-primary);">
                         <div class="stat-value">3.62%</div>
@@ -1215,16 +1199,8 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                 </ul>
             </div>
             <div class="card">
-                <div class="card-header"><div class="card-icon emerald">🛡️</div><span class="card-title">Resilience Metrics</span></div>
-                <table class="data-table" style="font-size: 0.9rem; margin-top: 1rem;">
-                    <thead><tr><th>Advantage</th><th>Performance</th></tr></thead>
-                    <tbody>
-                        <tr><td>Domestic Production</td><td>90%+ of Core SKU</td></tr>
-                        <tr><td>Innovation Cycle</td><td>6-9 Months</td></tr>
-                        <tr><td>Raw Material Variance</td><td>&lt;3% annual</td></tr>
-                        <tr><td>Stockout Resilience</td><td>Zero critical incidents</td></tr>
-                    </tbody>
-                </table>
+                <div class="card-header"><div class="card-icon purple">⚡</div><span class="card-title">Innovation Cycle Speed (Months)</span></div>
+                <div class="chart-container" style="height: 300px;"><canvas id="innovationCycleChart"></canvas></div>
             </div>
         </div>
         <div class="info-box blue" style="margin-top: 1.5rem;">
@@ -1433,8 +1409,8 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                 </div>
             </div>
             <div class="card">
-                <div class="card-header"><div class="card-icon indigo">📊</div><span class="card-title">Share Power Distribution</span></div>
-                <div class="chart-container medium" style="height: 300px;"><canvas id="marketShareChart"></canvas></div>
+                <div class="card-header"><div class="card-icon indigo">🏪</div><span class="card-title">Retail Footprint Scale (Stores)</span></div>
+                <div class="chart-container medium" style="height: 300px;"><canvas id="retailFootprintChart"></canvas></div>
             </div>
         </div>
     </div>
@@ -1739,13 +1715,8 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
                 </ul>
             </div>
             <div class="card">
-                <div class="card-header"><div class="card-icon indigo">⚠️</div><span class="card-title">Structural Deficit</span></div>
-                <ul class="feature-list" style="margin-top: 1rem;">
-                    <li style="color: var(--rose-dark);"><strong>AI/Smart Gap:</strong> TPX/SNBR leading biometric tracking.</li>
-                    <li style="color: var(--rose-dark);"><strong>Legacy Footprint:</strong> 58 shows vs Sleep Number's 650+.</li>
-                    <li style="color: var(--amber-dark);"><strong>Brand Tenure:</strong> Challenger status vs. 30+ year incumbents.</li>
-                    <li style="color: var(--rose-dark);"><strong>Retail Leverage:</strong> TPX ownership of Mattress Firm.</li>
-                </ul>
+                <div class="card-header"><div class="card-icon amber">🎯</div><span class="card-title">Price vs. Innovation Mapping</span></div>
+                <div class="chart-container" style="height: 400px;"><canvas id="pricePerformanceScatterChart"></canvas></div>
             </div>
         </div>
     </div>
@@ -1910,17 +1881,7 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
         <div class="grid-2">
             <div class="card" style="border-top: 4px solid var(--purple-primary);">
                 <div class="card-header"><div class="card-icon purple">🧪</div><span class="card-title">Dec 2025 Study Results</span></div>
-                <div class="stat-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-                    <div class="stat-card">
-                        <div class="stat-value" style="color: var(--emerald);">68%</div>
-                        <div class="stat-label">Pain Reduction (Essentials)</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" style="color: var(--emerald);">63%</div>
-                        <div class="stat-label">Pain Reduction (Restore)</div>
-                    </div>
-                </div>
-                <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--text-muted);">Independent analysis of <strong>3,300+ nights</strong> objective data by SleepScore Labs.</p>
+                <div class="chart-container" style="height: 350px;"><canvas id="clinicalResultsChart"></canvas></div>
             </div>
             <div class="card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">🩺</div>
@@ -2062,30 +2023,19 @@ border: 5px solid transparent; transition: all 0.4s ease; position: relative;
     <div class="slide-content">
         <div class="grid-2">
             <div class="card" style="border-top: 6px solid var(--rose);">
-                <div class="card-header"><span class="card-title" style="color: var(--rose-dark);">🔴 High Impact Threats</span></div>
-                <div style="margin-top: 1rem;">
-                    <p style="font-weight: 700; color: var(--text-primary);">1. Smart Tech Disruption</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Sleep Number's 15M users create a data moat.</p>
-                    <div class="tag tag-purple" style="background: var(--rose-light); color: var(--rose-dark); border: none;">MITIGATION: Smart Pilot BY FY2027</div>
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <p style="font-weight: 700; color: var(--text-primary);">2. Scale Asymmetry</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Somnigroup marketing spend is 10x higher.</p>
-                    <div class="tag tag-purple" style="background: var(--rose-light); color: var(--rose-dark); border: none;">MITIGATION: Surgical Brand Spend</div>
+                <div class="card-header"><span class="card-title" style="color: var(--rose-dark);">🔴 Strategic Risk Profile</span></div>
+                <div class="chart-container" style="height: 400px; margin-top: 1.5rem;">
+                    <canvas id="riskMatrixChart"></canvas>
                 </div>
             </div>
             <div class="card" style="border-top: 6px solid var(--amber);">
-                <div class="card-header"><span class="card-title" style="color: var(--amber-dark);">🟡 Operational Risks</span></div>
-                <div style="margin-top: 1rem;">
-                    <p style="font-weight: 700; color: var(--text-primary);">3. Housing Turnover Lag</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Interest rates suppress home move purchases.</p>
-                    <div class="tag tag-purple" style="background: var(--amber-light); color: var(--amber-dark); border: none;">MITIGATION: Replacement-Cycle Marketing</div>
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <p style="font-weight: 700; color: var(--text-primary);">4. Core IP Expiration</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Early lattice patents aging into public domain.</p>
-                    <div class="tag tag-purple" style="background: var(--amber-light); color: var(--amber-dark); border: none;">MITIGATION: DreamLayer R&D Focus</div>
-                </div>
+                <div class="card-header"><span class="card-title" style="color: var(--amber-dark);">🟡 Critical Risk Factors</span></div>
+                <ul class="feature-list" style="margin-top: 1rem;">
+                    <li><strong>Smart Tech Disruption:</strong> SNBR Data Moat.</li>
+                    <li><strong>Scale Asymmetry:</strong> TPX Marketing Spend.</li>
+                    <li><strong>Housing Turnover:</strong> Interest Rate Lag.</li>
+                    <li><strong>IP Expiration:</strong> Patent aging risks.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -2364,18 +2314,175 @@ function initChartsForSlide(slideNum) {
         }
     });
     if (slideNum === 3) initMarketGrowthChart();
+    else if (slideNum === 4) { initGlobalGrowthChart(); initRegionalMixChart(); }
     else if (slideNum === 5) initMarginChart();
     else if (slideNum === 6) initMarginTrendChart();
     else if (slideNum === 9) initEconomicImpactChart();
+    else if (slideNum === 18) initInnovationCycleChart();
     else if (slideNum === 19) initSegmentChart();
     else if (slideNum === 22) initCriteriaChart();
-    else if (slideNum === 23) initMarketShareChart();
+    else if (slideNum === 23) initRetailFootprintChart();
     else if (slideNum === 24) initMarketSharePieChart();
     else if (slideNum === 25) initRevenueBarChart();
     else if (slideNum === 31) initValueCurveChart();
     else if (slideNum === 32) initValueCurveLineChart();
+    else if (slideNum === 33) initPricePerformanceScatterChart();
     else if (slideNum === 34) initChannelMixChart();
+    else if (slideNum === 38) initClinicalResultsChart();
     else if (slideNum === 41) initEbitdaChart();
+    else if (slideNum === 43) initRiskMatrixChart();
+}
+
+function initGlobalGrowthChart() {
+    const ctx = document.getElementById('globalGrowthChart');
+    if (!ctx) return;
+    chartInstances.globalGrowth = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Global Market', 'US Market'],
+            datasets: [{
+                label: 'Forecast CAGR %',
+                data: [6.38, 3.62],
+                backgroundColor: ['rgba(102, 16, 242, 0.8)', 'rgba(59, 130, 246, 0.8)'],
+                borderRadius: 10
+            }]
+        },
+        options: { 
+            responsive: true, maintainAspectRatio: false, 
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } }, x: { grid: { display: false } } }
+        }
+    });
+}
+
+function initRegionalMixChart() {
+    const ctx = document.getElementById('regionalMixChart');
+    if (!ctx) return;
+    chartInstances.regionalMix = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['North America', 'Western Europe', 'Asia-Pacific', 'Others'],
+            datasets: [{
+                data: [35, 28, 22, 15],
+                backgroundColor: ['#6610f2', '#3b82f6', '#10b981', '#94a3b8'],
+                borderWidth: 2, borderColor: '#ffffff'
+            }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+    });
+}
+
+function initInnovationCycleChart() {
+    const ctx = document.getElementById('innovationCycleChart');
+    if (!ctx) return;
+    chartInstances.innovationCycle = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Purple', 'Industry Avg'],
+            datasets: [{
+                label: 'Months to Market',
+                data: [7.5, 15],
+                backgroundColor: ['#6610f2', '#ef4444'],
+                borderRadius: 8
+            }]
+        },
+        options: { 
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false, 
+            plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true }, y: { grid: { display: false } } }
+        }
+    });
+}
+
+function initRetailFootprintChart() {
+    const ctx = document.getElementById('retailFootprintChart');
+    if (!ctx) return;
+    chartInstances.retailFootprint = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Somnigroup', 'Sleep Number', 'Purple', 'Saatva'],
+            datasets: [{
+                label: 'Specialty Stores',
+                data: [2300, 650, 58, 25],
+                backgroundColor: ['rgba(239, 68, 68, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(102, 16, 242, 0.9)', 'rgba(16, 185, 129, 0.8)'],
+                borderRadius: 6
+            }]
+        },
+        options: { 
+            responsive: true, maintainAspectRatio: false, 
+            plugins: { legend: { display: false } },
+            scales: { y: { type: 'logarithmic', beginAtZero: false, min: 10 }, x: { grid: { display: false } } }
+        }
+    });
+}
+
+function initPricePerformanceScatterChart() {
+    const ctx = document.getElementById('pricePerformanceScatterChart');
+    if (!ctx) return;
+    chartInstances.pricePerformance = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                { label: 'Purple', data: [{ x: 5800, y: 95 }, { x: 3495, y: 85 }, { x: 1995, y: 75 }], backgroundColor: '#6610f2', pointRadius: 10 },
+                { label: 'Somnigroup', data: [{ x: 8000, y: 85 }, { x: 4000, y: 70 }, { x: 2000, y: 60 }], backgroundColor: '#ef4444', pointRadius: 8 },
+                { label: 'Sleep Number', data: [{ x: 10000, y: 90 }, { x: 5000, y: 80 }, { x: 3000, y: 70 }], backgroundColor: '#3b82f6', pointRadius: 8 },
+                { label: 'Saatva', data: [{ x: 3500, y: 75 }, { x: 2500, y: 65 }, { x: 1500, y: 55 }], backgroundColor: '#10b981', pointRadius: 8 }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            scales: {
+                x: { title: { display: true, text: 'Price (ASP $)', font: { weight: 'bold' } } },
+                y: { title: { display: true, text: 'Innovation/Tech Score', font: { weight: 'bold' } }, min: 50, max: 100 }
+            }
+        }
+    });
+}
+
+function initClinicalResultsChart() {
+    const ctx = document.getElementById('clinicalResultsChart');
+    if (!ctx) return;
+    chartInstances.clinicalResults = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Essentials (Pain Reduction)', 'Restore (Pain Reduction)'],
+            datasets: [{
+                label: 'Clinical % Improvement',
+                data: [68, 63],
+                backgroundColor: ['rgba(102, 16, 242, 0.85)', 'rgba(102, 16, 242, 0.7)'],
+                borderRadius: 12
+            }]
+        },
+        options: { 
+            responsive: true, maintainAspectRatio: false, 
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' } } }
+        }
+    });
+}
+
+function initRiskMatrixChart() {
+    const ctx = document.getElementById('riskMatrixChart');
+    if (!ctx) return;
+    chartInstances.riskMatrix = new Chart(ctx, {
+        type: 'bubble',
+        data: {
+            datasets: [
+                { label: 'Smart Tech Gap', data: [{ x: 9, y: 9, r: 25 }], backgroundColor: 'rgba(239, 68, 68, 0.7)' },
+                { label: 'Scale Asymmetry', data: [{ x: 8, y: 7, r: 20 }], backgroundColor: 'rgba(239, 68, 68, 0.5)' },
+                { label: 'Housing Lag', data: [{ x: 6, y: 8, r: 15 }], backgroundColor: 'rgba(245, 158, 11, 0.6)' },
+                { label: 'IP Expiration', data: [{ x: 5, y: 6, r: 12 }], backgroundColor: 'rgba(245, 158, 11, 0.4)' }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            scales: {
+                x: { title: { display: true, text: 'Probability (1-10)' }, min: 0, max: 10 },
+                y: { title: { display: true, text: 'Impact (1-10)' }, min: 0, max: 10 }
+            },
+            plugins: { tooltip: { callbacks: { label: c => c.dataset.label } } }
+        }
+    });
 }
 
 function initChannelMixChart() {
