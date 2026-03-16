@@ -274,6 +274,45 @@
             font-size: 1.05rem;
         }
 
+        /* Slide 9: compact layout so table, summary, and chart all fit */
+        section[data-slide="9"] .slide-content {
+            padding: 1.5rem 3rem 2.2rem;
+        }
+
+        section[data-slide="9"] .slide-content .data-table {
+            margin-bottom: 0.75rem;
+        }
+
+        section[data-slide="9"] .slide-content > div[style*="grid-template-columns"] {
+            margin-top: 0.75rem;
+        }
+
+        section[data-slide="9"] .slide-content > .card {
+            margin-top: 0.75rem;
+        }
+
+        section[data-slide="9"] .slide-content .chart-container {
+            height: 140px !important;
+        }
+
+        /* Slide 12: tighten layout so bottom journey stays above footer */
+        section[data-slide="12"] .slide-content {
+            padding: 1.5rem 3rem 2.2rem;
+        }
+
+        section[data-slide="12"] .slide-content .grid-2 {
+            gap: 1.4rem !important;
+        }
+
+        section[data-slide="12"] .slide-content > .card:last-of-type {
+            margin-top: 1rem !important;
+            padding: 1.1rem !important;
+        }
+
+        section[data-slide="12"] .slide-content > .card:last-of-type p {
+            font-size: 0.85rem;
+        }
+
         /* Presentation Area & Scaling Wrapper */
         /* Presentation Area & Scaling Wrapper */
         .presentation-area {
