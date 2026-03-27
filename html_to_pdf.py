@@ -2,16 +2,7 @@
 """
 html_to_pdf.py
 --------------
-Converts a multi-slide HTML presentation (pres.html) to a pixel-perfect PDF.
-
-Strategy
---------
-- Opens pres.html in headless Chromium (Playwright) at 1280x720 (16:9)
-- Device scale factor 2x -> each slide captured at 2560x1440
-- For each slide: calls the deck's own updateSlide(i) JS function,
-  then takes a viewport screenshot clipped to the slide area
-- Assembles all JPEG screenshots into a single PDF with img2pdf
-  at 13.33 x 7.5 in per page (perfect 16:9 at 192 DPI)
+Converts a multi-slide HTML presentation into a PDF.
 
 Install
 -------
@@ -20,8 +11,7 @@ Install
 
 Usage
 -----
-    python html_to_pdf.py                        # uses pres.html -> pres_output/presentation.pdf
-    python html_to_pdf.py my_deck.html out.pdf   # custom paths
+    python html_to_pdf.py
 """
 
 import sys
@@ -34,15 +24,14 @@ import img2pdf
 # ── Config ────────────────────────────────────────────────────────────────────
 HTML_FILE  = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("pres.html")
 PDF_OUT    = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("pres_output/presentation.pdf")
-SLIDE_W    = 1280   # logical CSS px (16:9)
+SLIDE_W    = 1280   
 SLIDE_H    = 720
-SCALE      = 2      # device pixel ratio -> 2560x1440 actual capture
-JPEG_Q     = 95     # JPEG quality for slide images
-WAIT_LOAD  = 3000   # ms after networkidle before starting (allow Chart.js + fonts)
-WAIT_SLIDE = 150    # ms after activating each slide (chart settle)
+SCALE      = 2      
+JPEG_Q     = 95     
+WAIT_LOAD  = 3000   
+WAIT_SLIDE = 150    
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Build SETUP_JS with literal pixel values (avoids f-string / {W} token issues)
 SETUP_JS = f"""
 () => {{
   // Kill all CSS animations & transitions
@@ -123,20 +112,17 @@ async def capture_slides(html_path: Path, tmp_dir: Path) -> list[Path]:
         await page.goto(html_path.as_uri(), wait_until="networkidle", timeout=120_000)
         await page.wait_for_timeout(WAIT_LOAD)
 
-        # Wait for web fonts
         try:
             await page.evaluate("() => document.fonts.ready")
         except Exception:
             pass
 
-        # One-time setup: freeze animations, flush charts, hide chrome
         await page.evaluate(SETUP_JS)
 
         count = await page.locator("section.slide").count()
         print(f"Found {count} slides — capturing ...")
 
         for i in range(count):
-            # Activate slide with per-slide error resilience
             try:
                 await page.evaluate(f"({ACTIVATE_SLIDE_JS})({i})")
                 await page.wait_for_timeout(WAIT_SLIDE)
@@ -166,7 +152,6 @@ def build_pdf(slide_imgs: list[Path], pdf_path: Path) -> None:
 
     pdf_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # 13.333in x 7.5in = exact 16:9 widescreen page size
     page_w = img2pdf.in_to_pt(13.333)
     page_h = img2pdf.in_to_pt(7.5)
     layout = img2pdf.get_layout_fun(pagesize=(page_w, page_h))
@@ -186,8 +171,6 @@ def main():
 
     tmp_dir = PDF_OUT.parent / "_slides_tmp"
 
-    # Use asyncio.run() (Python 3.7+); apply nest_asyncio patch only if
-    # called from inside a running event loop (e.g. Jupyter).
     try:
         slide_imgs = asyncio.run(capture_slides(html_path, tmp_dir))
     except RuntimeError:
