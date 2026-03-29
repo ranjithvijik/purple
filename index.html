@@ -190,7 +190,8 @@
         .slide {
             position: absolute;
             inset: 0;
-            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
             display: none;
             background: var(--bg-surface);
             padding: 2rem;
@@ -222,7 +223,7 @@
         }
 
         .slide-content {
-            height: calc(100% - 4rem)
+            height: auto
         }
 
         .slide-number {
@@ -2141,6 +2142,16 @@
 
 
     <style id="apa-figure-citations-upgrade">
+        .speaker-notes[open] {
+            max-height: none !important;
+            overflow: visible !important;
+        }
+
+        .speaker-notes-body {
+            max-height: none !important;
+            overflow: visible !important;
+        }
+
         .slide-source {
             margin-top: .7rem;
             padding-top: .45rem;
@@ -2479,9 +2490,7 @@
             height: auto
         }
 
-        .slide {
-            overflow: hidden
-        }
+        /* .slide overflow:hidden removed — use print media query instead */
 
         .data-table {
             width: 100%;
@@ -2893,13 +2902,13 @@
                                     2026</div>
                             </div>
                             <div class="stat-card" style="border-left: 5px solid var(--teal);">
-                                <div class="stat-value">$22.4B</div>
+                                <div class="stat-value">$32.4B</div>
                                 <div class="stat-label">Retail Market (2031)</div>
                                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Mordor
                                     Intelligence</div>
                             </div>
                             <div class="stat-card" style="border-left: 5px solid var(--blue);">
-                                <div class="stat-value">3.62%</div>
+                                <div class="stat-value">2.2%</div>
                                 <div class="stat-label">U.S. CAGR (2026-31)</div>
                                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Forecast
                                     Period</div>
@@ -2984,14 +2993,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-source"><strong>Figure sources:</strong> (IBISWorld, 2025a, 2025b; Mordor
-                            Intelligence, 2026).</div>
+                        <div class="slide-source"><strong>Figure sources:</strong> (IBISWorld, 2025a, 2025b).</div>
                         <details class="speaker-notes">
                             <summary>Notes</summary>
                             <div class="speaker-notes-body">
                                 <p>This slide summarizes the overall U.S. mattress category and shows that Purple
                                     competes in a sizable but pressured market, with about $9.3 billion in manufacturing
-                                    revenue, a projected $22.4 billion retail market by 2031, a 3.62% forecast CAGR from
+                                    revenue, a projected $32.4 billion retail market by 2031, a 2.2% forecast CAGR
+                                    (IBISWorld, 2025a) from
                                     2026 to 2031, and a short-term 2025 decline of about 0.6%. The mix of long-run
                                     growth and near-term softness indicates that the category remains relevant, but
                                     competition for share and margin stays intense. The slide supports the conclusion
@@ -3141,7 +3150,8 @@
                                     <div class="card-icon blue">⚙️</div><span class="card-title">Technological</span>
                                 </div>
                                 <ul class="feature-list">
-                                    <li>200+ GelFlex® patents remain a core differentiator.</li>
+                                    <li>200+ GelFlex® patents (Purple Innovation, Inc., 2025) remain a core
+                                        differentiator.</li>
                                     <li>Utah vertical integration accelerates iteration and product refresh speed.</li>
                                     <li>Smart-sleep and biometric features remain Purple’s clearest product gap.</li>
                                     <li>Sleep Number’s connected ecosystem raises the competitive standard.</li>
@@ -3230,7 +3240,7 @@
                                         Purchases Linked to Home Moves</div>
                                     <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
                                         Source:
-                                        IBISWorld (2026a)</div>
+                                        IBISWorld (2025a)</div>
                                 </div>
 
                                 <!-- Housing Indicators -->
@@ -3370,7 +3380,7 @@
                             </div>
                         </div>
                         <div class="slide-source"><strong>Figure sources:</strong> (IBISWorld, 2025a, 2025b; Mintel,
-                            2025; Mordor Intelligence, 2026).</div>
+                            2025).</div>
                         <details class="speaker-notes">
                             <summary>Notes</summary>
                             <div class="speaker-notes-body">
@@ -3954,7 +3964,7 @@
                             </div>
                         </div>
                         <div class="slide-source"><strong>Figure sources:</strong> (Mintel, 2025; Grand View Research,
-                            2022; Mordor Intelligence, 2026).</div>
+                            2022).</div>
                         <details class="speaker-notes">
                             <summary>Notes</summary>
                             <div class="speaker-notes-body">
@@ -4307,7 +4317,7 @@
                                         </tr>
                                         <tr>
                                             <td><strong>Serta Simmons</strong></td>
-                                            <td>17.5%</td>
+                                            <td>~12%†</td>
                                             <td>$2.4B</td>
                                             <td><span class="tag"
                                                     style="background: var(--amber-light); color: var(--amber-dark); font-size: 0.65rem; border: none;">Legacy</span>
@@ -4315,7 +4325,9 @@
                                         </tr>
                                         <tr>
                                             <td><strong>Sleep Number</strong></td>
-                                            <td>9.0%</td>
+                                            <td><span
+                                                    title="Per Sleep Number 10-K, FY2024; IBISWorld (2025a) specialty retail store share: 4.86%">9.0%‡</span>
+                                            </td>
                                             <td>$1.68B</td>
                                             <td><span class="tag"
                                                     style="background: var(--blue-light); color: var(--blue-dark); font-size: 0.65rem; border: none;">Tech
@@ -4356,7 +4368,7 @@
                                 </div>
 
                                 <div style="margin-top: 0.75rem; font-size: 0.7rem; color: var(--text-muted);">
-                                    Source: Purple Innovation Analysis Table 8; IBISWorld (2026a)
+                                    Source: Purple Innovation Analysis Table 8; IBISWorld (2025a)
                                 </div>
                             </div>
 
@@ -4374,7 +4386,7 @@
                                 <div
                                     style="margin-top: 1rem; padding: 0.75rem; background: var(--rose-light); border-radius: 8px; text-align: center;">
                                     <div style="font-size: 0.85rem; color: var(--rose-dark);">
-                                        <strong>Distribution Gap:</strong> Purple's 58 showrooms vs. Sleep Number's 650+
+                                        <strong>Distribution Gap:</strong> Purple's 58 showrooms vs. Sleep Number's 640
                                         and
                                         Somnigroup's 2,300+
                                     </div>
@@ -4387,7 +4399,8 @@
                             <summary>Notes</summary>
                             <div class="speaker-notes-body">
                                 <p>This slide establishes the scale and structure of the competitive field, including
-                                    estimated U.S. shares of 27.5% for Somnigroup, 17.5% for Serta Simmons, and 9.0% for
+                                    estimated U.S. shares of 27.5% for Somnigroup, ~12% (mfg., IBISWorld 2025b) for
+                                    Serta Simmons, and ~5% (retail, IBISWorld 2025a) for
                                     Sleep Number, alongside revenues of about $4.9 billion, $2.4 billion, and $1.68
                                     billion, respectively. These figures show how much larger the leading rivals are
                                     than Purple in both resources and market presence, while the share values should be
@@ -4437,7 +4450,7 @@
                                         <div
                                             style="background: var(--amber-light); padding: 0.75rem; border-radius: 8px; text-align: center;">
                                             <div style="font-size: 1.3rem; font-weight: 800; color: var(--amber-dark);">
-                                                17.5%</div>
+                                                ~12%†</div>
                                             <div style="font-size: 0.75rem; color: var(--text-muted);">Serta Simmons
                                             </div>
                                         </div>
@@ -4501,7 +4514,8 @@
                             <div class="speaker-notes-body">
                                 <p>This slide visualizes concentration and shows that the top three players account for
                                     an estimated 54% of the U.S. market, including estimated shares of 27.5% for
-                                    Somnigroup, 17.5% for Serta Simmons, and 9.0% for Sleep Number. A market in which
+                                    Somnigroup, ~12% (mfg., IBISWorld 2025b) for Serta Simmons, and ~5% (retail,
+                                    IBISWorld 2025a) for Sleep Number. A market in which
                                     three firms hold more than half of share typically gives those firms structural
                                     advantages in awareness, retail relationships, and promotional influence. The slide
                                     supports the conclusion that Purple must remain sharply differentiated because the
@@ -4938,7 +4952,7 @@
                                                 Capex</strong>
                                             <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">58 stores
                                                 vs.
-                                                SNBR's 650+ requires boutique density in urban hubs</p>
+                                                SNBR's 640 requires boutique density in urban hubs</p>
                                         </div>
                                     </div>
                                 </div>
@@ -6361,7 +6375,7 @@
                                     <li style="padding: 0.4rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><strong
                                             style="color: var(--amber-dark);">Distribution Deficit:</strong> 58 stores
                                         vs
-                                        SNBR's 650+</li>
+                                        SNBR's 640</li>
                                     <li style="padding: 0.4rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><strong
                                             style="color: var(--amber-dark);">Market Share:</strong> ~2-3% of domestic
                                         market</li>
@@ -6723,7 +6737,7 @@
                                 </div>
                                 <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">3/5; 58 stores
                                     vs.
-                                    650+ (SNBR) and 2,300+ (TPX)</p>
+                                    640 (SNBR; Sleep Number 10-K, FY2024) and 2,300+ (TPX)</p>
                             </div>
 
                             <div
@@ -6763,56 +6777,74 @@
                     <div class="slide-content">
                         <div class="references-vertical">
                             <div class="ref-entry industry">IBISWorld. (2025a, October 5). <em>Bed &amp; mattress stores
-                                    in the US industry analysis, 2025</em>.
-                                https://www.ibisworld.com/united-states/industry/bed-mattress-stores/5462/</div>
+                                    in the US industry analysis, 2025</em>. <a
+                                    href="https://my.ibisworld.com/us/en/industry/OD5462/about"
+                                    target="_blank">https://my.ibisworld.com/us/en/industry/OD5462/about</a></div>
                             <div class="ref-entry industry">IBISWorld. (2025b, October 18). <em>Mattress manufacturing
-                                    in the US industry analysis, 2025</em>.
-                                https://www.ibisworld.com/united-states/industry/mattress-manufacturing/876/</div>
-                            <div class="ref-entry industry">Mintel. (2025, June 16). <em>US pillows and mattresses
-                                    market report 2025</em>.
-                                https://store.mintel.com/report/us-pillows-and-mattresses-market-report</div>
-                            <div class="ref-entry primary">U.S. Securities and Exchange Commission. (2025). <em>Purple
-                                    Innovation, Inc. Form 10-K</em>.
-                                https://www.sec.gov/Archives/edgar/data/1643953/000121390025023815/ea0230077-10k_purpleinnov.htm
-                            </div>
-                            <div class="ref-entry primary">U.S. Securities and Exchange Commission. (2025). <em>Sleep
-                                    Number Corporation Form 10-K</em>.
-                                https://www.sec.gov/Archives/edgar/data/827187/000082718725000018/snbr-20241228.htm
+                                    in the US industry analysis, 2025</em>. <a
+                                    href="https://my.ibisworld.com/us/en/industry/33791/about"
+                                    target="_blank">https://my.ibisworld.com/us/en/industry/33791/about</a></div>
+                            <div class="ref-entry market">Mintel. (2025, June 16). <em>US pillows and mattresses market
+                                    report 2025</em>. <a
+                                    href="https://store.mintel.com/report/us-pillows-and-mattresses-market-report"
+                                    target="_blank">https://store.mintel.com/report/us-pillows-and-mattresses-market-report</a>
                             </div>
                             <div class="ref-entry primary">Purple Innovation, Inc. (2025, March 12). <em>Purple
-                                    Innovation reports fourth quarter and full year 2024 results</em>.
-                                https://investors.purple.com/news/news-details/2025/Purple-Innovation-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx
+                                    Innovation reports fourth quarter and full year 2024 results</em> [Press release].
+                                <a href="https://investors.purple.com/news/news-details/2025/Purple-Innovation-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx"
+                                    target="_blank">https://investors.purple.com/news/news-details/2025/Purple-Innovation-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx</a>
                             </div>
+                            <div class="ref-entry market">Saatva. (2025). <em>About us: Who we are, our purpose, our
+                                    commitment</em>. <a href="https://www.saatva.com/about-us"
+                                    target="_blank">https://www.saatva.com/about-us</a></div>
                             <div class="ref-entry primary">Sleep Number Corporation. (2025, March 4). <em>Sleep Number
-                                    announces fourth quarter and full year 2024 results</em>.
-                                https://ir.sleepnumber.com/news/news-details/2025/Sleep-Number-Announces-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx
+                                    announces fourth quarter and full year 2024 results</em> [Press release]. <a
+                                    href="https://ir.sleepnumber.com/news/news-details/2025/Sleep-Number-Announces-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx"
+                                    target="_blank">https://ir.sleepnumber.com/news/news-details/2025/Sleep-Number-Announces-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx</a>
                             </div>
-                            <div class="ref-entry market">Grand View Research. (2022, December 15). <em>U.S. mattress
-                                    market size &amp; outlook, 2025-2030</em>.
-                                https://www.grandviewresearch.com/horizon/outlook/mattress-market/united-states</div>
-                            <div class="ref-entry market">Mordor Intelligence. (2026, January 6). <em>United States
-                                    mattress market size, analysis &amp; share report 2031</em>.
-                                https://www.mordorintelligence.com/industry-reports/united-states-mattress-market</div>
+                            <div class="ref-entry primary">Somnigroup International, Inc. (2025, February 18).
+                                <em>Somnigroup International Inc. reports fourth quarter and full year 2024 results</em>
+                                [Press release]. PR Newswire. <a
+                                    href="https://investor.somnigroup.com/newsroom/news-details/2025/Somnigroup-International-Inc-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx"
+                                    target="_blank">https://investor.somnigroup.com/newsroom/news-details/2025/Somnigroup-International-Inc-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx</a>
+                            </div>
+                            <div class="ref-entry rubric">U.S. Securities and Exchange Commission. (2025). <em>Purple
+                                    Innovation, Inc. Form 10-K</em>. <a
+                                    href="https://www.sec.gov/Archives/edgar/data/1643953/000121390025023815/ea0230077-10k_purpleinnov.htm"
+                                    target="_blank">https://www.sec.gov/Archives/edgar/data/1643953/000121390025023815/ea0230077-10k_purpleinnov.htm</a>
+                            </div>
+                            <div class="ref-entry rubric">U.S. Securities and Exchange Commission. (2025). <em>Sleep
+                                    Number Corporation Form 10-K</em>. <a
+                                    href="https://www.sec.gov/Archives/edgar/data/827187/000082718725000018/snbr-20241228.htm"
+                                    target="_blank">https://www.sec.gov/Archives/edgar/data/827187/000082718725000018/snbr-20241228.htm</a>
+                            </div>
+                            <div class="ref-entry rubric">U.S. Securities and Exchange Commission. (2025).
+                                <em>Somnigroup International, Inc. Form 10-K (formerly Tempur Sealy International, Inc.)
+                                    for fiscal year ended December 31, 2024</em>. <a
+                                    href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001173584&amp;type=10-K&amp;dateb=&amp;owner=include&amp;count=10"
+                                    target="_blank">https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001173584&amp;type=10-K</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide-number">32 / 33</div>
-                </section>
+            </div>
+            <div class="slide-number">32 / 33</div>
+            </section>
 
-                <section id="slide-33" aria-label="Slide 33: Thank You" class="slide" data-slide="33">
-                    <div class="thank-you-slide"
-                        style="background: var(--purple-gradient); border-radius: 24px; padding: 4rem;">
-                        <h2 style="font-size: 4rem; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">Thank You</h2>
-                        <p>Purple Innovation, Inc. | Industry & Competitive Analysis</p>
-                    </div>
-                    <div class="slide-number" style="color: rgba(255,255,255,0.5); bottom: 1.5rem;">46 / 46</div>
-                </section>
-            </div>
-            <div class="helper-bar">
-                <div>Use <span class="kbd">←</span> <span class="kbd">→</span> to navigate, <span
-                        class="kbd">Home</span>/<span class="kbd">End</span> to jump, <span class="kbd">F</span> for
-                    fullscreen, <span class="kbd">T</span> for contents.</div>
-                <div id="currentTitle">Slide 1</div>
-            </div>
+            <section id="slide-33" aria-label="Slide 33: Thank You" class="slide" data-slide="33">
+                <div class="thank-you-slide"
+                    style="background: var(--purple-gradient); border-radius: 24px; padding: 4rem;">
+                    <h2 style="font-size: 4rem; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">Thank You</h2>
+                    <p>Purple Innovation, Inc. | Industry & Competitive Analysis</p>
+                </div>
+                <div class="slide-number" style="color: rgba(255,255,255,0.5); bottom: 1.5rem;">46 / 46</div>
+            </section>
+        </div>
+        <div class="helper-bar">
+            <div>Use <span class="kbd">←</span> <span class="kbd">→</span> to navigate, <span
+                    class="kbd">Home</span>/<span class="kbd">End</span> to jump, <span class="kbd">F</span> for
+                fullscreen, <span class="kbd">T</span> for contents.</div>
+            <div id="currentTitle">Slide 1</div>
+        </div>
         </div>
     </main>
     <aside class="toc-drawer" id="tocDrawer" aria-hidden="true">
@@ -7164,8 +7196,8 @@
                     fallback: { type: 'scatter', datasets: [{ label: 'Purple', color: '#6610f2', data: [{ x: 7, y: 8, label: 'Purple' }] }, { label: 'Sleep Number', color: '#14b8a6', data: [{ x: 9, y: 9, label: 'SNBR' }] }, { label: 'Saatva', color: '#3b82f6', data: [{ x: 8, y: 7, label: 'Saatva' }] }, { label: 'Somnigroup', color: '#f59e0b', data: [{ x: 6, y: 5, label: 'Somni' }] }], xRange: [0, 10], yRange: [0, 10] }
                 },
                 retailFootprintChart: {
-                    chart: { type: 'bar', data: { labels: ['Purple', 'Sleep Number', 'Mattress Firm'], datasets: [{ label: 'Stores / Doors', data: [58, 650, 2300], backgroundColor: ['#6610f2', '#14b8a6', '#f43f5e'] }] }, options: { responsive: true, maintainAspectRatio: false } },
-                    fallback: { type: 'bar', labels: ['Purple', 'Sleep Number', 'Mattress Firm'], values: [58, 650, 2300], colors: ['#6610f2', '#14b8a6', '#f43f5e'], max: 2300 }
+                    chart: { type: 'bar', data: { labels: ['Purple', 'Sleep Number', 'Mattress Firm'], datasets: [{ label: 'Stores / Doors', data: [58, 640, 2300], backgroundColor: ['#6610f2', '#14b8a6', '#f43f5e'] }] }, options: { responsive: true, maintainAspectRatio: false } },
+                    fallback: { type: 'bar', labels: ['Purple', 'Sleep Number', 'Mattress Firm'], values: [58, 640, 2300], colors: ['#6610f2', '#14b8a6', '#f43f5e'], max: 2300 }
                 },
                 revenueBarChart: {
                     chart: { type: 'bar', data: { labels: ['Purple', 'Sleep Number', 'Somnigroup', 'Saatva'], datasets: [{ label: 'Revenue ($B)', data: [0.49, 1.70, 4.90, 0.80], backgroundColor: ['#6610f2', '#14b8a6', '#f43f5e', '#3b82f6'] }] }, options: { responsive: true, maintainAspectRatio: false } },
