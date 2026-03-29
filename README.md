@@ -906,25 +906,15 @@ IBISWorld. (2025a). *Bed & mattress stores in the US* (Industry Report OD5462). 
 
 IBISWorld. (2025b). *Mattress manufacturing in the US* (Industry Report 33791). IBISWorld. [https://my.ibisworld.com/us/en/industry/33791/about](https://my.ibisworld.com/us/en/industry/33791/about)
 
-MarketBeat. (2026). *Purple Innovation (PRPL) stock price, news & analysis*. Retrieved March 28, 2026, from [https://www.marketbeat.com/stocks/NASDAQ/PRPL/](https://www.marketbeat.com/stocks/NASDAQ/PRPL/)
-
 Mintel. (2025). *Pillows and mattresses – US – 2025*. Mintel Group Ltd. [https://clients.mintel.com/report/pillows-and-mattresses-us-2025](https://clients.mintel.com/report/pillows-and-mattresses-us-2025)
-
-Mordor Intelligence. (2026). *United States mattress market size, analysis & share report 2031*. Mordor Intelligence. [https://www.mordorintelligence.com/industry-reports/united-states-mattress-market](https://www.mordorintelligence.com/industry-reports/united-states-mattress-market)
 
 Purple Innovation, Inc. (2025). *Annual report pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 for the fiscal year ended December 31, 2024* (Form 10-K). U.S. Securities and Exchange Commission. [https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001643953&type=10-K&dateb=&owner=include&count=40](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001643953&type=10-K&dateb=&owner=include&count=40)
 
 Saatva. (2025). *Saatva luxury mattresses*. [https://www.saatva.com](https://www.saatva.com)
 
-Simply Wall St. (2026). *Purple Innovation (NASDAQ:PRPL) stock analysis*. Retrieved March 28, 2026, from [https://simplywall.st/stocks/us/consumer-durables/nasdaq-prpl/purple-innovation](https://simplywall.st/stocks/us/consumer-durables/nasdaq-prpl/purple-innovation)
-
 Sleep Number Corporation. (2025). *Annual report on Form 10-K for the fiscal year ended December 28, 2024*. U.S. Securities and Exchange Commission.
 
 Somnigroup International. (2025). *Corporate overview*. Somnigroup International.
-
-Stock Analysis. (2026). *Purple Innovation (PRPL) market cap & net worth*. Retrieved March 28, 2026, from [https://stockanalysis.com/stocks/prpl/](https://stockanalysis.com/stocks/prpl/)
-
-StockTitan. (2026). *PRPL stock price, news & analysis*. Retrieved March 28, 2026, from [https://stocktitan.net/quote/PRPL/](https://stocktitan.net/quote/PRPL/)
 
 U.S. Securities and Exchange Commission. (2025). *EDGAR full-text search*. [https://efts.sec.gov/LATEST/search-index?q=%22Purple+Innovation%22&dateRange=custom&startdt=2025-01-01&enddt=2025-12-31&forms=10-K](https://efts.sec.gov/LATEST/search-index?q=%22Purple+Innovation%22&dateRange=custom&startdt=2025-01-01&enddt=2025-12-31&forms=10-K)
 
