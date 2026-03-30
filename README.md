@@ -902,20 +902,15 @@ A synthesis of IP, product, clinical, and channel dimensions into an overall str
 ---
 ## References
 
-IBISWorld. (2025a). *Bed & mattress stores in the US* (Industry Report OD5462). IBISWorld. [https://my.ibisworld.com/us/en/industry/OD5462/about](https://my.ibisworld.com/us/en/industry/OD5462/about)
+IBISWorld. (2025a). *Bed & mattress stores in the US* (Industry Report OD5462). IBISWorld. https://my.ibisworld.com/us/en/industry/OD5462/about
 
-IBISWorld. (2025b). *Mattress manufacturing in the US* (Industry Report 33791). IBISWorld. [https://my.ibisworld.com/us/en/industry/33791/about](https://my.ibisworld.com/us/en/industry/33791/about)
+IBISWorld. (2025b). *Mattress manufacturing in the US* (Industry Report 33791). IBISWorld. https://my.ibisworld.com/us/en/industry/33791/about
 
-Mintel. (2025). *Pillows and mattresses – US – 2025*. Mintel Group Ltd. [https://clients.mintel.com/report/pillows-and-mattresses-us-2025](https://clients.mintel.com/report/pillows-and-mattresses-us-2025)
+Mintel. (2025). *Pillows and mattresses – US – 2025*. Mintel Group Ltd. https://clients.mintel.com/report/pillows-and-mattresses-us-2025
 
-Purple Innovation, Inc. (2025). *Annual report pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 for the fiscal year ended December 31, 2024* (Form 10-K). U.S. Securities and Exchange Commission. [https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001643953&type=10-K&dateb=&owner=include&count=40](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001643953&type=10-K&dateb=&owner=include&count=40)
+Purple Innovation, Inc. (2025). Annual report on Form 10-K for the fiscal year ended December 31, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1643953/000121390025023815/ea0230077-10k_purpleinnov.htm
 
-Saatva. (2025). *Saatva luxury mattresses*. [https://www.saatva.com](https://www.saatva.com)
+Sleep Number Corporation. (2025). Annual report on Form 10-K for the fiscal year ended December 28, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/827187/000082718725000018/snbr-20241228.htm
 
-Sleep Number Corporation. (2025). *Annual report on Form 10-K for the fiscal year ended December 28, 2024*. U.S. Securities and Exchange Commission.
-
-Somnigroup International. (2025). *Corporate overview*. Somnigroup International.
-
-U.S. Securities and Exchange Commission. (2025). *EDGAR full-text search*. [https://efts.sec.gov/LATEST/search-index?q=%22Purple+Innovation%22&dateRange=custom&startdt=2025-01-01&enddt=2025-12-31&forms=10-K](https://efts.sec.gov/LATEST/search-index?q=%22Purple+Innovation%22&dateRange=custom&startdt=2025-01-01&enddt=2025-12-31&forms=10-K)
-
+Somnigroup International, Inc. (2025). Annual report on Form 10-K for the fiscal year ended December 31, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001206264&type=10-K&dateb=&owner=include&count=40
 ---
