@@ -912,6 +912,6 @@ Purple Innovation, Inc. (2025). Annual report on Form 10-K for the fiscal year e
 
 Sleep Number Corporation. (2025). Annual report on Form 10-K for the fiscal year ended December 28, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/827187/000082718725000018/snbr-20241228.htm
 
-Somnigroup International, Inc. (2025). Annual report on Form 10-K for the fiscal year ended December 31, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001206264&type=10-K&dateb=&owner=include&count=40
+Somnigroup International, Inc. (2025). Annual report on Form 10-K for the fiscal year ended December 31, 2024. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1206264/000120626426000015/sgi-20251231.htm
 
 ---
